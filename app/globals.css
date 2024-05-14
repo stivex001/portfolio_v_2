@@ -1,8 +1,23 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  body{
-    background-color: #251C31;
+@layer base {
+  body {
+   background-color: #251C31;
+   color: white
   }
-  
+
+  .scrol::-webkit-scrollbar {
+    width: 1px;
+    height: 2px;
+  }
+
+  .scrol::-webkit-scrollbar-thumb {
+    background: darkgrey;
+  }
+
+  .scrol::-webkit-scrollbar-thumb:hover {
+    background: #942838;
+  }
+}

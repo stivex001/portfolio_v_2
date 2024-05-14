@@ -18,6 +18,18 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        gray1: "#f7f6fe",
+        primary: "#251C31",
+        secondary: "#1A0B2E",
+        grayish: "#f9fafb"
+        
+      },
+      backgroundImage: {
+        gradient: "linear-gradient(to bottom,var(--white),var(--primary-50))",
+        // authImg: "url('/src/images/authImage.jpg')",
+        // aboutImg: "url('/src/images/modern.jpg')",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
