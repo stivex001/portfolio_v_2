@@ -5,7 +5,9 @@
 @layer base {
   body {
    background-color: #251C31;
-   color: white
+   color: white;
+   overflow-x: hidden;
+   
   }
 
   .scrol::-webkit-scrollbar {
