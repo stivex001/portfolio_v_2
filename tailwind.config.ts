@@ -27,7 +27,7 @@ const config = {
       },
       backgroundImage: {
         gradient: "linear-gradient(to bottom,var(--white),var(--primary-50))",
-        // authImg: "url('/src/images/authImage.jpg')",
+        grad: "url('/Gradient.png')",
         // aboutImg: "url('/src/images/modern.jpg')",
       },
       keyframes: {
