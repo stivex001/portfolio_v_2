@@ -1,11 +1,21 @@
-import React from 'react'
+"use client"
 
-type Props = {}
+import React from "react";
+import { motion } from "framer-motion";
+
+type Props = {};
 
 const About = (props: Props) => {
   return (
-    <div>About</div>
-  )
-}
+    <motion.div
+      className="h-full"
+      initial={{ y: "-200vh" }}
+      animate={{ y: "0%" }}
+      transition={{ duration: 1 }}
+    >
+      About
+    </motion.div>
+  );
+};
 
-export default About
+export default About;
