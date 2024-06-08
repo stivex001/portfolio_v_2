@@ -1,60 +1,61 @@
 import Image from "next/image";
 import React from "react";
+import { ExpressIcon, FigmaIcon, GitIcon, JsIcon, MongoIcon, NextIcon, NodejsIcon, ReactIocn, SassIcon, TailwindIcon, TypescriptIcon } from "../icons/SkillsIcons";
 
 const skills = [
   {
     id: 1,
-    logo: "",
+    logo: <JsIcon />,
     name: "Javascript",
   },
   {
     id: 2,
-    logo: "",
+    logo: <TypescriptIcon />,
     name: "Typescript",
   },
   {
     id: 3,
-    logo: "",
+    logo: <ReactIocn />,
     name: "React",
   },
   {
     id: 4,
-    logo: "",
+    logo: <NextIcon />,
     name: "Next.js",
   },
   {
     id: 5,
-    logo: "",
+    logo: <NodejsIcon />,
     name: "Node.js",
   },
   {
     id: 6,
-    logo: "",
+    logo: <ExpressIcon />,
     name: "Express.js",
   },
   {
     id: 7,
-    logo: "",
+    logo: <MongoIcon />,
     name: "MongoDB",
   },
   {
     id: 8,
-    logo: "",
+    logo: <SassIcon />,
     name: "Sass/Scss",
   },
   {
     id: 9,
-    logo: "",
+    logo: <TailwindIcon />,
     name: "Tailwindcss",
   },
   {
     id: 10,
-    logo: "",
+    logo: <FigmaIcon />,
     name: "Figma",
   },
   {
     id: 11,
-    logo: "",
+    logo: <GitIcon />,
     name: "Git",
   },
 ];
@@ -67,11 +68,11 @@ export const Skills = (props: Props) => {
       <h1 className="uppercase text-white font-bold text-2xl">
         Skills & Technlogies
       </h1>
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-3 gap-y-12">
         {skills?.map((skill) => (
-          <div key={skill.id} className="flex flex-col gap-3">
-            <Image src={skill.logo} alt={skill.name} />
-            <p>{skill.name}</p>
+          <div key={skill.id} className="flex flex-col gap-2">
+            <div>{skill.logo}</div>
+            <p className="text-base font-medium  ">{skill.name}</p>
           </div>
         ))}
       </div>
