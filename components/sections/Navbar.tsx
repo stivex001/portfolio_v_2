@@ -11,6 +11,10 @@ type Props = {};
 
 const links = [
   {
+    url: "/",
+    title: "Home",
+  },
+  {
     url: "/about",
     title: "About",
   },
