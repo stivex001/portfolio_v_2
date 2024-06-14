@@ -20,9 +20,8 @@ const About = (props: Props) => {
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64">
           <Biography />
           <Skills />
-          <MyExperience />     
         </div>
-        <div></div>
+        <div className="">svg</div>
       </div>
     </motion.div>
   );
