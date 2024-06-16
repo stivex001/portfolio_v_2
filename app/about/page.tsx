@@ -16,7 +16,7 @@ const About = (props: Props) => {
       animate={{ y: "0%" }}
       transition={{ duration: 1 }}
     >
-      <div className="flex">
+      <div className="flex h-screen">
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64">
           <Biography />
           <Skills />
