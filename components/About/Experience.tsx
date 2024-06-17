@@ -1,13 +1,31 @@
-import React from "react";
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
 
 type Props = {};
 
 export const MyExperience = (props: Props) => {
+  const expereiceRef = useRef(null);
+
+  const isExperienceRefInView = useInView(expereiceRef);
+
   return (
-    <div className="flex flex-col gap-12 pb-48">
-      <h1 className="uppercase text-white font-bold text-2xl">Experience</h1>
+    <motion.div className="flex flex-col gap-12 pb-48" ref={expereiceRef}>
+      <motion.h1
+        initial={{ x: "-100vh" }}
+        animate={isExperienceRefInView ? { x: 0 } : {}}
+        transition={{ delay: 0.2 }}
+        className="uppercase text-white font-bold text-2xl"
+      >
+        Experience
+      </motion.h1>
       {/* first list */}
-      <div>
+      <motion.div
+        initial={{ x: "100vh" }}
+        animate={isExperienceRefInView ? { x: 0 } : {}}
+        transition={{ delay: 0.2 }}
+      >
         <div className="flex justify-between ">
           <div className="w-1/3 flex flex-col ">
             <h1 className="bg-secondary p-3 font-semibold rounded-b-lg rounded-s-lg">
@@ -113,7 +131,7 @@ export const MyExperience = (props: Props) => {
           </div>
           <div className=" w-1/3"></div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };

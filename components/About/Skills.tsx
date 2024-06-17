@@ -1,6 +1,20 @@
+"use client";
 import Image from "next/image";
-import React from "react";
-import { ExpressIcon, FigmaIcon, GitIcon, JsIcon, MongoIcon, NextIcon, NodejsIcon, ReactIocn, SassIcon, TailwindIcon, TypescriptIcon } from "../icons/SkillsIcons";
+import React, { useRef } from "react";
+import {
+  ExpressIcon,
+  FigmaIcon,
+  GitIcon,
+  JsIcon,
+  MongoIcon,
+  NextIcon,
+  NodejsIcon,
+  ReactIocn,
+  SassIcon,
+  TailwindIcon,
+  TypescriptIcon,
+} from "../icons/SkillsIcons";
+import { motion, useInView, useScroll } from "framer-motion";
 
 const skills = [
   {
@@ -63,19 +77,33 @@ const skills = [
 type Props = {};
 
 export const Skills = (props: Props) => {
+  const skillRef = useRef(null);
+
+  const isSkillRefInView = useInView(skillRef);
+
   return (
-    <div className="flex flex-col gap-12">
-      <h1 className="uppercase text-white font-bold text-2xl">
+    <motion.div className="flex flex-col gap-12" ref={skillRef}>
+      <motion.h1
+        initial={{ x: "-100vh" }}
+        animate={isSkillRefInView ? { x: 0 } : {}}
+        transition={{ delay: 0.2 }}
+        className="uppercase text-white font-bold text-2xl"
+      >
         Skills & Technlogies
-      </h1>
-      <div className="grid grid-cols-3 gap-y-12">
+      </motion.h1>
+      <motion.div
+        initial={{ x: "100vh" }}
+        animate={isSkillRefInView ? { x: 0 } : {}}
+        transition={{ delay: 0.2 }}
+        className="grid grid-cols-3 gap-y-12"
+      >
         {skills?.map((skill) => (
           <div key={skill.id} className="flex flex-col gap-2">
             <div>{skill.logo}</div>
             <p className="text-base font-medium  ">{skill.name}</p>
           </div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
