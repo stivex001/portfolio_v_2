@@ -4,21 +4,115 @@ type Props = {};
 
 export const MyExperience = (props: Props) => {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 pb-48">
       <h1 className="uppercase text-white font-bold text-2xl">Experience</h1>
-      <div className="flex justify-between h-48">
-        <div className="w-1/3 flex flex-col bg-red-500">
-          <h1>Junior Frontend Developer</h1>
-          <p>stilll</p>
-          <span>2024 - Present</span>
-          <span>Emplug</span>
+      {/* first list */}
+      <div>
+        <div className="flex justify-between ">
+          <div className="w-1/3 flex flex-col ">
+            <h1 className="bg-secondary p-3 font-semibold rounded-b-lg rounded-s-lg">
+              Junior Frontend Developer
+            </h1>
+            <ul className="n list-disc">
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+            </ul>
+
+            <span className="p-3 text-red-400 text-sm font-semibold">
+              2024 - Present
+            </span>
+            <span className="p-2 rounded bg-secondary text-sm font-semibold w-fit">
+              Emplug
+            </span>
+          </div>
+          <div className="w-1/6 ">
+            <div className="w-1 h-full bg-secondary rounded relative">
+              <div className="absolute w-5 h-5 rounded-full ring-4 ring-secondary bg-white -left-2"></div>
+            </div>
+          </div>
+          <div className=" w-1/3"></div>
         </div>
-        <div className="w-1/6 bg-yellow-500 ">
-          <div>
-            <div>dgyg</div>
+        {/* second list */}
+        <div className="flex justify-between ">
+          <div className="w-1/3"></div>
+          <div className="w-1/6 ">
+            <div className="w-1 h-full bg-secondary rounded relative">
+              <div className="absolute w-5 h-5 rounded-full ring-4 ring-secondary bg-white -left-2"></div>
+            </div>
+          </div>
+          <div className="w-1/3 flex flex-col ">
+            <h1 className="bg-secondary p-3 font-semibold rounded-b-lg rounded-s-lg">
+              Junior Frontend Developer
+            </h1>
+            <ul className="n list-disc">
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+            </ul>
+
+            <span className="p-3 text-red-400 text-sm font-semibold">
+              2024 - Present
+            </span>
+            <span className="p-2 rounded bg-secondary text-sm font-semibold w-fit">
+              Emplug
+            </span>
           </div>
         </div>
-        <div className="bg-blue-500 w-1/3">sdyf</div>
+
+        {/* third list */}
+        <div className="flex justify-between ">
+          <div className="w-1/3 flex flex-col ">
+            <h1 className="bg-secondary p-3 font-semibold rounded-b-lg rounded-s-lg">
+              Junior Frontend Developer
+            </h1>
+            <ul className="n list-disc">
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+              <li className="p-3 text-sm italic">
+                Developed and maintained the Plugbay website, facilitating user
+                engagement and collaboration with cross-functional teams.
+              </li>
+            </ul>
+
+            <span className="p-3 text-red-400 text-sm font-semibold">
+              2024 - Present
+            </span>
+            <span className="p-2 rounded bg-secondary text-sm font-semibold w-fit">
+              Emplug
+            </span>
+          </div>
+          <div className="w-1/6 ">
+            <div className="w-1 h-full bg-secondary rounded relative">
+              <div className="absolute w-5 h-5 rounded-full ring-4 ring-secondary bg-white -left-2"></div>
+            </div>
+          </div>
+          <div className=" w-1/3"></div>
+        </div>
       </div>
     </div>
   );

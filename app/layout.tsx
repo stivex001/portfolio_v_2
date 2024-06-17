@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AnimationProvider>
-          <div className="w-screen h-screen bg-grad bg-no-repeat bg-cover">
+          <div className="w-screen min-h-screen bg-grad bg-no-repeat bg-cover">
             <div className="h-24">
               <Navbar />
             </div>
