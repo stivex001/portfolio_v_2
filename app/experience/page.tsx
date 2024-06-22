@@ -10,7 +10,6 @@ type Props = {};
 const Experience = (props: Props) => {
 
   const containerRef = useRef(null)
-
   const {scrollYProgress} = useScroll({container:containerRef})
 
   return (
