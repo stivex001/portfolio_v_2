@@ -16,7 +16,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "React Commercesssss",
+    title: "React Commerce",
     desc: "this is a react component not thara",
     img: "https://images.pexels.com/photos/2808402/pexels-photo-2808402.jpeg?auto=compress&cs=tinysrgb&w=400",
     link: "https://github.com/stivex001",
