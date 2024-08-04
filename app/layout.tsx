@@ -6,6 +6,7 @@ import { AnimationProvider } from "@/components/AnimationProvider";
 import { Navigation } from "@/components/navigation/Navigation";
 import visby from "@/app/fonts/visby";
 import lato from "@/app/fonts/lato";
+import Providers from "@/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${visby.variable} ${lato.className} h-full scroll-smooth`}>
-      <body className='font-normal bg-primary font-lato selection:bg-blue-200 selection:text-white'>
+      <body className='font-normal bg-white dark:bg-primary font-lato selection:bg-blue-200 dark:selection:bg-blue-300 selection:text-white'>
         <AnimationProvider>
           {/* <Navigation />
           <div>{children}</div> */}
@@ -63,7 +64,7 @@ export default function RootLayout({
             </div>
             <div className="h-[calc(100vh-6rem)] ">{children}</div>
           </div> */}
-           <div className="">{children}</div>
+           <Providers >{children}</Providers>
         </AnimationProvider>
       </body>
     </html>
