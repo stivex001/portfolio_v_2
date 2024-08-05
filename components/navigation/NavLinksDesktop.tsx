@@ -2,12 +2,13 @@
 "use client";
 import useScrollDirection from "@/utils/useScrollDirection";
 import useUserScrolling from "@/utils/useUserScrolling";
-import { a, useSpring } from "@react-spring/web";
+import { a,to, useSpring } from "@react-spring/web";
 import React, { FocusEvent, useEffect, useRef, useState } from "react";
 import { AnchorName, navigationData } from "../data/navigation";
 import { Submenu } from "./Submenu";
 import useActiveSection from "@/utils/useActiveSection";
 import VerticalLineIcon from "../svg/abstract/VerticalLineIcon";
+import Link from "../clickable/Link";
 
 type Props = {};
 
@@ -84,6 +85,30 @@ export const NavLinksDesktop = (props: Props) => {
     }
   }, [submenuFirstItemRefs, submenuOpen]);
 
+  const activeSectionMarkerMorph = [
+    { pos: -24, width: 24 },
+    { pos: 24, width: 39.4 },
+    { pos: 95.4, width: 45.25 },
+    { pos: 190.65, width: 64.85 },
+    { pos: 305.5, width: 85.17 },
+  ];
+  const activeSectionMarker = {
+    unmounted: activeSectionMarkerMorph[0],
+    home: activeSectionMarkerMorph[1],
+    about: activeSectionMarkerMorph[2],
+    experience: activeSectionMarkerMorph[2],
+    projects: activeSectionMarkerMorph[3],
+    "more-projects": activeSectionMarkerMorph[3],
+    recommendations: activeSectionMarkerMorph[3],
+    contact: activeSectionMarkerMorph[4],
+  };
+  const activeSectionMarkerSpring = useSpring({
+    to: {
+      width: activeSectionMarker[activeSection].width,
+      x: activeSectionMarker[activeSection].pos,
+    },
+  });
+
   return (
     <a.nav
       id={"main-menu"}
@@ -128,6 +153,29 @@ export const NavLinksDesktop = (props: Props) => {
       </ul>
       <div className="divider" aria-hidden>
         <VerticalLineIcon />
+      </div>
+      <ul className="flex gap-4 items-center">
+        {navigationData.socials.map((social) => (
+          <li key={social.name} className="h-[22px]">
+            <Link href={social.link} variant="plain" ariaLabel={social.name}>
+              {social.icon}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <div className="active-marker-bar absolute left-0 bottom-0 h-5 w-full overflow-hidden rounded-[10px] pointer-events-none">
+        <div className="relative h-full">
+          <a.div
+            className="active-marker absolute left-0 bottom-0 h-[10px] rounded-[5px] bg-blue-100 dark:bg-blue-d-200"
+            style={{
+              width: to(activeSectionMarkerSpring.width, (w) => `${w}px`),
+              transform: to(
+                activeSectionMarkerSpring.x,
+                (x) => `translateX(calc(${x}px)) translateY(50%)`
+              ),
+            }}
+          />
+        </div>
       </div>
     </a.nav>
   );
