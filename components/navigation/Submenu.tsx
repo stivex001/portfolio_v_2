@@ -76,7 +76,7 @@ export const Submenu = ({
         aria-label={submenuName}
       >
         <div className="relative translate-x-8">
-          <div className="submenu-pointer absolute w-[16.9px] h-[16.9px] bg-secondary ring-1 ring-grey-d dark:ring-0 dark:bg-grey-d rotate-45 rounded-[2px] -top-[12px] -translate-y-1/2"></div>
+          <div className="submenu-pointer absolute w-[16.9px] h-[16.9px] bg-grey-d ring-1 ring-grey-d dark:ring-0 dark:bg-secondary rotate-45 rounded-[2px] -top-[12px] -translate-y-1/2"></div>
           <div className="bg-white dark:bg-secondary absolute w-[34px] h-[12px] -top-[12px] -left-[8px]"></div>
         </div>
         <ul>

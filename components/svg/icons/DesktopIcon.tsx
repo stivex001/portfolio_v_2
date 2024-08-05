@@ -1,4 +1,5 @@
-import { svgStyles } from "@/app/components/svg/styles";
+import { svgStyles } from "../styles";
+
 
 export default function DesktopIcon() {
   return (
