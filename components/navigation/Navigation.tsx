@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLinksDesktop } from "./NavLinksDesktop";
+import NavLinksMobile from "./NavLinksMobile";
 
 type Props = {};
 
@@ -22,7 +23,7 @@ export const Navigation = (props: Props) => {
         </div>
       </div>
       <header className="navigation-container max-w-[1504px] sticky top-0 mx-auto z-10 isolate -mt-[96px] md:-mt-[112px] mb-[96px] md:mb-[112px]">
-        {/* <NavLinksMobile /> */}
+        <NavLinksMobile />
         <NavLinksDesktop />
       </header>
     </>
