@@ -97,6 +97,7 @@ export const NavLinksDesktop = (props: Props) => {
     home: activeSectionMarkerMorph[1],
     about: activeSectionMarkerMorph[2],
     experience: activeSectionMarkerMorph[2],
+    certifications: activeSectionMarkerMorph[2],
     projects: activeSectionMarkerMorph[3],
     "more-projects": activeSectionMarkerMorph[3],
     recommendations: activeSectionMarkerMorph[3],

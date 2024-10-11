@@ -13,6 +13,7 @@ export type AnchorName =
   | "home"
   | "about"
   | "experience"
+  | "certifications"
   | "projects"
   | "more-projects"
   | "recommendations"
@@ -83,6 +84,12 @@ const navigationData: NavigationData = {
           name: "experience",
           title: "My Experience as a Developer",
           link: "#experience",
+          icon: <PathIcon />,
+        },
+        {
+          name: "certifications",
+          title: "My Certificates",
+          link: "#cerification",
           icon: <PathIcon />,
         },
       ],
