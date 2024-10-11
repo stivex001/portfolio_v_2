@@ -1,19 +1,20 @@
-import Home from '@/components/Home'
-import MainPage from '@/components/MainPage'
-import { Navigation } from '@/components/navigation/Navigation'
-import SkipToContent from '@/components/SkipToContent'
-import React from 'react'
+import MainPage from "@/components/MainPage";
+import { Navigation } from "@/components/navigation/Navigation";
+import SkipToContent from "@/components/SkipToContent";
+import React from "react";
+import { AboutMe } from "@/components/About/AboutMe";
 
-type Props = {}
+type Props = {};
 
 const Page = (props: Props) => {
   return (
     <>
-    <SkipToContent />
-    <Navigation />
-    <MainPage />
+      <SkipToContent />
+      <Navigation />
+      <MainPage />
+      <AboutMe />
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

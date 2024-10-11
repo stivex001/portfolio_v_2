@@ -2,20 +2,19 @@
 "use client";
 import React from "react";
 import { a, to, useTrail } from "@react-spring/web";
-import Section from "./Section";
 import { useObservedSprings } from "@/utils/useObservedSpring";
 import animation from "./animations/animations";
 import Button from "./clickable/Button";
 import DownloadIcon from "./svg/icons/DownloadIcon";
 import Link from "./clickable/Link";
 import HomeBackground from "./home/HomeBackground";
+import Section from "./sections/Section";
 
 type Props = {};
 
 const MainPage = (props: Props) => {
   const exportFormat = "pdf";
-  const resumeDownloadLink = `https://docs.google.com/document/d/edit?usp=sharing/${process.env.NEXT_PUBLIC_RESUME_GOOGLE_DOC_ID}/export?format=${exportFormat}`;
-
+  const resumeDownloadLink = `https://docs.google.com/document/d/${process.env.NEXT_PUBLIC_RESUME_GOOGLE_DOC_ID}/export?format=${exportFormat}`;
   const {
     observedRef,
     springAnimate: [

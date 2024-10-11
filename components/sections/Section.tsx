@@ -2,8 +2,8 @@
 import { LegacyRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useDispatch } from "react-redux";
-import { AnchorName } from "./data/navigation";
 import { update } from "@/redux/section/sectionSlice";
+import { AnchorName } from "../data/navigation";
 
 interface SectionProps {
   padding?: string;

@@ -110,7 +110,7 @@ export default function NavLinksMobile() {
       <a.nav
         id={"mobile-main-menu"}
         className={`absolute top-6 right-6 h-12 w-12 bg-grey-fb dark:bg-primary ring-1 dark:ring-0 rounded-[10px] md:hidden overflow-hidden z-20 transition-colors ${
-          open ? "ring-secondary" : "ring-grey-b"
+          open ? "ring-secondary" : "ring-primary"
         }`}
         style={{
           width: to(
