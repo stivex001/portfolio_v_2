@@ -1,6 +1,6 @@
 import { getMonthDifference } from "@/utils/moment";
 
-export interface Expertise {
+export interface Certificate {
   logo: string;
   title: string;
   subTitle: string;
@@ -10,23 +10,23 @@ export interface Expertise {
   showcaseImage: string;
 }
 
-interface ExperienceData {
-  expertise: Expertise[];
+interface CertificateData {
+  certificate: Certificate[];
   startTime: Date;
   endTime: Date;
 }
 
-const expertise: Expertise[] = [
+const certificate: Certificate[] = [
   {
     logo: "/assets/experience/alx.jpeg",
     showcaseImage: "/assets/experience/alx_certificate.png",
-    title: "Microverse",
-    subTitle: "Remote Developer Bootcamp",
+    title: "Alx Software Engineering Programme",
+    subTitle: "Software Engineering",
     details:
       "Developed skills in remote pair programming using GitHub, industry-standard git-flow, and daily standups. Mastered algorithms, data structures, and full-stack development.",
-    timeRange: [new Date(2022, 4), new Date(2022, 11)],
+    timeRange: [new Date(2022, 1), new Date(2023, 2)],
     certificate:
-      "https://drive.google.com/file/d/1qmUspFThqBVWXYCytHKRpRAtw8oSLQ2r/view?usp=sharing",
+      "https://drive.google.com/file/d/1JnYqEnYiRlML8DVMdu_04tf72FKET_1J/view?usp=sharing",
   },
   {
     logo: "/assets/experience/minnesota.webp",
@@ -63,35 +63,35 @@ const expertise: Expertise[] = [
   },
 ];
 
-const experienceData: ExperienceData = {
-  expertise,
+const certificateData: CertificateData = {
+  certificate,
   startTime: new Date(2021, 0),
   endTime: new Date(2024, 0),
 };
 
-export function experienceTimelineCalculator(expertise: Expertise) {
+export function certificateTimelineCalculator(certificate: Certificate) {
   const MONTH_HEIGHT = 32;
   const YEAR_HEIGHT = MONTH_HEIGHT * 12;
   const MONTH_DIFFERENCE = getMonthDifference(
-    experienceData.startTime,
-    experienceData.endTime
+    certificateData.startTime,
+    certificateData.endTime
   );
   const YEAR_DIFFERENCE = Math.ceil(MONTH_DIFFERENCE / 12);
 
   const ACTIVE_EXPERTISE_MONTH_DIFFERENCE = getMonthDifference(
-    expertise.timeRange[0],
-    expertise.timeRange[1]
+    certificate.timeRange[0],
+    certificate.timeRange[1]
   );
   const MONTH_TIMELINE_HEIGHT =
     MONTH_HEIGHT * ACTIVE_EXPERTISE_MONTH_DIFFERENCE;
   const MONTH_TIMELINE_POS =
-    getMonthDifference(experienceData.startTime, expertise.timeRange[0]) *
+    getMonthDifference(certificateData.startTime, certificate.timeRange[0]) *
     MONTH_HEIGHT;
 
   const YEAR_TIMELINE_HEIGHT = MONTH_HEIGHT * MONTH_DIFFERENCE;
   const YEAR_TIMELINE_POS = MONTH_TIMELINE_POS + MONTH_TIMELINE_HEIGHT / 2;
 
-  const FIRST_YEAR = experienceData.startTime.getFullYear();
+  const FIRST_YEAR = certificateData.startTime.getFullYear();
 
   return {
     YEAR_TIMELINE_POS,
@@ -105,4 +105,4 @@ export function experienceTimelineCalculator(expertise: Expertise) {
   };
 }
 
-export default experienceData;
+export default certificateData;

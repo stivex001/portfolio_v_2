@@ -62,8 +62,8 @@ export const ExperienceTimeline = ({
           </a.div>
         </div>
       </div>
-      <div className="fade-up absolute -left-[8px] w-[calc(100%+16px)] h-5 top-0 bg-gradient-to-b from from-white dark:from-black" />
-      <div className="fade-down absolute -left-[8px] w-[calc(100%+16px)] h-5 bottom-0 bg-gradient-to-t from-white dark:from-black" />
+      <div className="fade-up absolute -left-[8px] w-[calc(100%+16px)] h-5 top-0 bg-gradient-to-b from from-white dark:from-blue-d-200" />
+      <div className="fade-down absolute -left-[8px] w-[calc(100%+16px)] h-5 bottom-0 bg-gradient-to-t from-white dark:from-blue-d-200" />
     </div>
   );
 };

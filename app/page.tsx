@@ -4,6 +4,7 @@ import SkipToContent from "@/components/SkipToContent";
 import React from "react";
 import { AboutMe } from "@/components/About/AboutMe";
 import { Experience } from "@/components/experience/Experience";
+import { Certification } from "@/components/experience/Certifications";
 
 type Props = {};
 
@@ -14,6 +15,7 @@ const Page = (props: Props) => {
       <Navigation />
       <MainPage />
       <AboutMe />
+      <Certification />
       <Experience />
     </>
   );

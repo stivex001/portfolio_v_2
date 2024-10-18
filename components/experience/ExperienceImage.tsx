@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { ExperienceImageProps } from "./props";
 import { a, SpringValue, to } from "@react-spring/web";

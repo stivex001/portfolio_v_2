@@ -10,13 +10,13 @@ export const ExperienceCard = ({
   expertise,
   contentReveal,
 }: ExperienceCardProps) => {
-  const dates = expertise.timeRange.map((date) => moment(date).format("MMMM"));
+  const dates = expertise.timeRange.map((date) => moment(date).format("MMMM YYYY"));
   const [initialDate, endDate] = expertise.timeRange;
   const dateDescription = `${moment(initialDate).format(
     "MMMM YYYY"
   )} to ${moment(endDate).format("MMMM YYYY")}`;
   return (
-    <article className="ml-[24px] md:ml-[28px] font-normal flex-1 semi-lg:flex-none semi-lg:w-[384px] lg:w-[512px] flex flex-col">
+    <article className="ml-[24px] md:ml-[28px] font-normal flex-1 lg:flex-none lg:w-[384px] xl:w-[512px] flex flex-col">
       <a.header className="flex gap-4 mt-auto" style={contentReveal[0]}>
         <div className="logo rounded-[4px] overflow-hidden min-w-[48px] aspect-square h-fit ring-1 ring-grey-ea dark:ring-0">
           <Image

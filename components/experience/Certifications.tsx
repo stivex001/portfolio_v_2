@@ -11,12 +11,13 @@ import { ExperienceImage } from "./ExperienceImage";
 import experienceData, { experienceTimelineCalculator } from "../data/experience";
 import { useSpring, useSpringRef, useTrail, useTransition } from "@react-spring/web";
 import { ExperienceControl } from "./ExperienceControl";
+import certificateData, { certificateTimelineCalculator } from "../data/certificate";
 
 type Props = {};
 
-export const Experience = (props: Props) => {
+export const Certification = (props: Props) => {
   const [expertiseIndex, setExpertiseIndex] = useState<number>(0);
-  const expertise = experienceData.expertise[expertiseIndex];
+  const expertise = certificateData.certificate[expertiseIndex];
   const { ref, inView } = useInView({
     threshold: 0,
     rootMargin: "0px 0px -512px",
@@ -25,7 +26,7 @@ export const Experience = (props: Props) => {
   const [viewed, setViewed] = useState<boolean>(false);
 
   const { YEAR_TIMELINE_POS, MONTH_TIMELINE_HEIGHT } =
-  experienceTimelineCalculator(expertise);
+  certificateTimelineCalculator(expertise);
 
   useEffect(() => {
     if (inView && !viewed) {
@@ -109,14 +110,14 @@ export const Experience = (props: Props) => {
 
   return (
     <Section
-      name="experience"
-      id="experience"
+      name="certifications"
+      id="certifications"
       sectionRef={ref}
       padding="pt-12 pb-16 md:pt-8 md:pb-[224px]"
     >
       <SectionHeader mode="standalone">
-        My <span className="text-blue-100 dark:blue-d-200">Experience</span> as
-        a developer
+        My <span className="text-blue-100 dark:blue-d-200">Certifications</span> 
+    
       </SectionHeader>
       <SectionDescription>
         A display of my growth as a frontend developer, showcasing the progress
