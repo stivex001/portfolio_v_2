@@ -6,9 +6,7 @@ import { AboutMe } from "@/components/About/AboutMe";
 import { Experience } from "@/components/experience/Experience";
 import { Certification } from "@/components/experience/Certifications";
 
-type Props = {};
-
-const Page = (props: Props) => {
+const Page = () => {
   return (
     <>
       <SkipToContent />

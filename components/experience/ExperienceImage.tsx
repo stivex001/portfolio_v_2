@@ -13,7 +13,7 @@ export const ExperienceImage = ({ imageTransition }: ExperienceImageProps) => {
       const expertise = experienceData.expertise[index];
       return (
         <a.div
-          className="-z-10 absolute right-0 top-1/2 hidden semi-lg:block md:w-[256px] semi-lg:w-[384px] lg:w-[480px]"
+          className="-z-10 absolute right-0 top-1/2 hidden lg:block md:w-[256px] lg:w-[384px] xl:w-[480px]"
           style={{
             opacity: style.opacity.to((o) => `${o}`),
             transform: to(

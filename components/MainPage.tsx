@@ -10,9 +10,7 @@ import Link from "./clickable/Link";
 import HomeBackground from "./home/HomeBackground";
 import Section from "./sections/Section";
 
-type Props = {};
-
-const MainPage = (props: Props) => {
+const MainPage = () => {
   const exportFormat = "pdf";
   const resumeDownloadLink = `https://docs.google.com/document/d/${process.env.NEXT_PUBLIC_RESUME_GOOGLE_DOC_ID}/export?format=${exportFormat}`;
   const {
@@ -56,7 +54,7 @@ const MainPage = (props: Props) => {
     >
       <header className="self-center text-center">
         <a.h1
-          className="text-grey-1 dark:text-grey-d text-[60px] md:text-[72px] lg:text-[100px] leading-[1] font-extrabold mx-6"
+          className="text-grey-1 dark:text-grey-d text-[60px] md:text-[72px] xl:text-[100px] leading-[1] font-extrabold mx-6"
           style={layoutReveal(1)}
         >
           <div className="inline-block relative w-0">
@@ -79,14 +77,14 @@ const MainPage = (props: Props) => {
           <span className="font-visby">STEPHEN ADEYEMO</span>
         </a.h1>
         <a.h2
-          className="uppercase dark:text-grey-6 font-[500] text-[15px] lg:text-base tracking-wide text-center font-lato"
+          className="uppercase dark:text-grey-6 font-[500] text-[15px] xl:text-base tracking-wide text-center font-lato"
           style={layoutReveal(2)}
         >
           I thrive in the digital realm.
         </a.h2>
       </header>
       <a.p
-        className="py-9 max-w-[512px] md:max-w-[650px] lg:text-[18px] text-center self-center"
+        className="py-9 max-w-[512px] md:max-w-[650px] xl:text-[18px] text-center self-center"
         style={layoutReveal(3)}
       >
         I specialize in building products, features, and websites. Explore my

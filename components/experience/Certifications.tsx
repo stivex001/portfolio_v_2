@@ -125,7 +125,7 @@ export const Certification = (props: Props) => {
       </SectionDescription>
       <div aria-label="experience carousel">
         <div
-          className="relative flex experience-content"
+          className="relative flex experience-content "
           id={`experience-item-${expertiseIndex + 1}`}
           role="tabpanel"
           style={{ perspective: "800px" }}

@@ -18,7 +18,7 @@ export default function AboutImage({
   ];
 
   return (
-    <picture className="group/picture about-image relative max-w-[350px] w-full aspect-square p-[25px] mx-auto lg:my-auto md:col-span-4">
+    <picture className="group/picture about-image relative max-w-[350px] w-full aspect-square p-[25px] mx-auto xl:my-auto md:col-span-4 ">
       <a.div
         className="w-full rounded-[10px] max-w-[300px] aspect-square overflow-hidden"
         style={imageAnimate()}

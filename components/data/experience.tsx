@@ -20,13 +20,13 @@ const expertise: Expertise[] = [
   {
     logo: "/assets/experience/alx.jpeg",
     showcaseImage: "/assets/experience/alx_certificate.png",
-    title: "Microverse",
-    subTitle: "Remote Developer Bootcamp",
+    title: "Alx Software Engineering Programme",
+    subTitle: "Software Engineering",
     details:
       "Developed skills in remote pair programming using GitHub, industry-standard git-flow, and daily standups. Mastered algorithms, data structures, and full-stack development.",
     timeRange: [new Date(2022, 4), new Date(2022, 11)],
     certificate:
-      "https://drive.google.com/file/d/1qmUspFThqBVWXYCytHKRpRAtw8oSLQ2r/view?usp=sharing",
+      "https://drive.google.com/file/d/1JnYqEnYiRlML8DVMdu_04tf72FKET_1J/view?usp=sharing",
   },
   {
     logo: "/assets/experience/minnesota.webp",

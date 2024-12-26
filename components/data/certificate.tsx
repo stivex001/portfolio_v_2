@@ -19,7 +19,7 @@ interface CertificateData {
 const certificate: Certificate[] = [
   {
     logo: "/assets/experience/alx.jpeg",
-    showcaseImage: "/assets/experience/alx_certificate.png",
+    showcaseImage: "/assets/experience/alx.jpeg",
     title: "Alx Software Engineering Programme",
     subTitle: "Software Engineering",
     details:
@@ -29,8 +29,8 @@ const certificate: Certificate[] = [
       "https://drive.google.com/file/d/1JnYqEnYiRlML8DVMdu_04tf72FKET_1J/view?usp=sharing",
   },
   {
-    logo: "/assets/experience/minnesota.webp",
-    showcaseImage: "/assets/experience/minnesota-showcase.webp",
+    logo: "/assets/experience/alx_certificate.png",
+    showcaseImage: "/assets/experience/alx_certificate.png",
     title: "University of Minnesota",
     subTitle: "Software Development Methodologies",
     details:
@@ -40,7 +40,7 @@ const certificate: Certificate[] = [
       "https://drive.google.com/file/d/1mKBTBjbhJmdGc4j5JHFKhmthl9c6_8pQ/view?usp=sharing",
   },
   {
-    logo: "/assets/experience/linkedin-learning.webp",
+    logo: "/assets/experience/alx_certificate.png",
     showcaseImage: "/assets/experience/linkedin-learning-showcase.webp",
     title: "Linkedin Learning",
     subTitle: "Become a Software Developer",
@@ -51,7 +51,7 @@ const certificate: Certificate[] = [
       "https://drive.google.com/file/d/1_TH9jAT91AS_A-2Unh74u9BlqPWzd3f-/view?usp=sharing",
   },
   {
-    logo: "/assets/experience/gds.webp",
+    logo: "/assets/experience/alx_certificate.png",
     showcaseImage: "/assets/experience/gds-showcase.webp",
     title: "Google Digital Skills for Africa",
     subTitle: "Fundamentals of Digital Marketing",

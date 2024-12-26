@@ -77,7 +77,7 @@ export const AboutMe = (props: Props) => {
   return (
     <Section name="about" id="about" padding="pt-12 pb-16 md:py-8">
       <SectionHeader>About me</SectionHeader>
-      <div className="grid gap-6 md:grid-cols-10 my-6 md:my-[96px] lg:mt-[128px] lg:mb-[256px]">
+      <div className=" grid gap-6 md:grid-cols-10 my-6 md:my-[96px] xl:mt-[128px] xl:mb-[256px]">
         <AboutImage
           imageAnimate={imageReveal}
           plusReveal={bgPlusReveal}
