@@ -137,7 +137,7 @@ export const Certification = (props: Props) => {
             monthTimeLineMarker={monthTimeLineMarker}
           />
           <ExperienceCard expertise={expertise} contentReveal={contentReveal} />
-          <ExperienceImage imageTransition={imageTransition}/>
+          <ExperienceImage imageTransition={imageTransition} data={certificateData.certificate}/>
         </div>
       </div>
       <ExperienceControl

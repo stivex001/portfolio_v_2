@@ -19,7 +19,7 @@ interface CertificateData {
 const certificate: Certificate[] = [
   {
     logo: "/assets/experience/alx.jpeg",
-    showcaseImage: "/assets/experience/alx.jpeg",
+    showcaseImage: "/assets/experience/alx_certificate.png",
     title: "Alx Software Engineering Programme",
     subTitle: "Software Engineering",
     details:
@@ -31,18 +31,18 @@ const certificate: Certificate[] = [
   {
     logo: "/assets/experience/alx_certificate.png",
     showcaseImage: "/assets/experience/alx_certificate.png",
-    title: "University of Minnesota",
+    title: "Meta Advance React",
     subTitle: "Software Development Methodologies",
     details:
       "An online non-credit course authorized by the University of Minnesota and offered through Coursera, on Important Processes and Methodologies in Software Development.",
     timeRange: [new Date(2022, 3), new Date(2022, 6)],
     certificate:
-      "https://drive.google.com/file/d/1mKBTBjbhJmdGc4j5JHFKhmthl9c6_8pQ/view?usp=sharing",
+      "https://coursera.org/share/071e032414229dda93ceede847ec47cf",
   },
   {
     logo: "/assets/experience/alx_certificate.png",
     showcaseImage: "/assets/experience/linkedin-learning-showcase.webp",
-    title: "Linkedin Learning",
+    title: "Full Stack nanodegree",
     subTitle: "Become a Software Developer",
     details:
       "A course that provides a broad perspective on core technologies for web development, software development, and databases. It introduced a bigger picture of how development careers work.",
@@ -51,15 +51,15 @@ const certificate: Certificate[] = [
       "https://drive.google.com/file/d/1_TH9jAT91AS_A-2Unh74u9BlqPWzd3f-/view?usp=sharing",
   },
   {
-    logo: "/assets/experience/alx_certificate.png",
-    showcaseImage: "/assets/experience/gds-showcase.webp",
-    title: "Google Digital Skills for Africa",
-    subTitle: "Fundamentals of Digital Marketing",
+    logo: "/assets/experience/Udacity_logo.png",
+    showcaseImage: "/assets/experience/web_dev.png",
+    title: "Web Development Foundation",
+    subTitle: "Fundamentals of Web Development",
     details:
-      "I mastered the basics of digital marketing. An Interactive Advertising Bureau-accredited course, created by Google trainers. Packed full of exercises and real-world examples to turn knowledge into action.",
-    timeRange: [new Date(2022, 5), new Date(2022, 7)],
+      "I mastered the basics of Web Development. ",
+    timeRange: [new Date(2022, 3), new Date(2022, 5)],
     certificate:
-      "https://drive.google.com/file/d/1T6XkLXWlfkPqLkghNSmHvGYjakWjNA1i/view?usp=sharing",
+      "https://drive.google.com/file/d/1K0OZm0nKYoRemY7SKg_op4NP1BWkKmmv/view?usp=sharing",
   },
 ];
 

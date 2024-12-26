@@ -3,6 +3,7 @@ import { Expertise } from '../data/experience';
 
 export interface ExperienceImageProps {
   imageTransition: Function;
+  data: any
 }
 
 export interface ExperienceCardProps {
