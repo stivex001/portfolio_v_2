@@ -8,8 +8,15 @@ import SectionDescription from "../sections/SectionDescription";
 import { ExperienceTimeline } from "./ExperienceTimeline";
 import { ExperienceCard } from "./ExperienceCard";
 import { ExperienceImage } from "./ExperienceImage";
-import experienceData, { experienceTimelineCalculator } from "../data/experience";
-import { useSpring, useSpringRef, useTrail, useTransition } from "@react-spring/web";
+import experienceData, {
+  experienceTimelineCalculator,
+} from "../data/experience";
+import {
+  useSpring,
+  useSpringRef,
+  useTrail,
+  useTransition,
+} from "@react-spring/web";
 import { ExperienceControl } from "./ExperienceControl";
 
 type Props = {};
@@ -25,7 +32,7 @@ export const Experience = (props: Props) => {
   const [viewed, setViewed] = useState<boolean>(false);
 
   const { YEAR_TIMELINE_POS, MONTH_TIMELINE_HEIGHT } =
-  experienceTimelineCalculator(expertise);
+    experienceTimelineCalculator(expertise);
 
   useEffect(() => {
     if (inView && !viewed) {
@@ -136,7 +143,10 @@ export const Experience = (props: Props) => {
             monthTimeLineMarker={monthTimeLineMarker}
           />
           <ExperienceCard expertise={expertise} contentReveal={contentReveal} />
-          <ExperienceImage imageTransition={imageTransition}/>
+          <ExperienceImage
+            imageTransition={imageTransition}
+            data={experienceData.expertise}
+          />
         </div>
       </div>
       <ExperienceControl

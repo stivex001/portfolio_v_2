@@ -29,34 +29,35 @@ const certificate: Certificate[] = [
       "https://drive.google.com/file/d/1JnYqEnYiRlML8DVMdu_04tf72FKET_1J/view?usp=sharing",
   },
   {
-    logo: "/assets/experience/alx_certificate.png",
-    showcaseImage: "/assets/experience/alx_certificate.png",
-    title: "Meta Advance React",
-    subTitle: "Software Development Methodologies",
+    logo: "/assets/experience/coursera.jpeg",
+    showcaseImage: "/assets/experience/meta.jpeg",
+    title: "Meta Advanced React",
+    subTitle: "Advanced React Development",
     details:
-      "An online non-credit course authorized by the University of Minnesota and offered through Coursera, on Important Processes and Methodologies in Software Development.",
+      "An online course offered by Meta through Coursera, focusing on advanced React concepts such as hooks, state management, performance optimization, and testing React applications.",
     timeRange: [new Date(2022, 3), new Date(2022, 6)],
-    certificate:
-      "https://coursera.org/share/071e032414229dda93ceede847ec47cf",
+    certificate: "https://coursera.org/share/071e032414229dda93ceede847ec47cf",
   },
+
   {
-    logo: "/assets/experience/alx_certificate.png",
-    showcaseImage: "/assets/experience/linkedin-learning-showcase.webp",
-    title: "Full Stack nanodegree",
-    subTitle: "Become a Software Developer",
+    logo: "/assets/experience/Udacity_logo.png",
+    showcaseImage: "/assets/experience/fullstack.png",
+    title: "Full Stack Nanodegree",
+    subTitle: "Master Full Stack Development",
     details:
-      "A course that provides a broad perspective on core technologies for web development, software development, and databases. It introduced a bigger picture of how development careers work.",
-    timeRange: [new Date(2022, 6), new Date(2022, 7)],
+      "A comprehensive program by Udacity that covers front-end and back-end development, including frameworks like React and Flask, database management with SQL and PostgreSQL, and deployment strategies for web applications.",
+    timeRange: [new Date(2022, 3), new Date(2022, 8)],
     certificate:
-      "https://drive.google.com/file/d/1_TH9jAT91AS_A-2Unh74u9BlqPWzd3f-/view?usp=sharing",
+      "https://www.udacity.com/certificate/e/a271eb14-07a0-11ed-a3fc-a7340b293674",
   },
+
   {
     logo: "/assets/experience/Udacity_logo.png",
     showcaseImage: "/assets/experience/web_dev.png",
     title: "Web Development Foundation",
     subTitle: "Fundamentals of Web Development",
     details:
-      "I mastered the basics of Web Development. ",
+      "An introductory course that provided a strong foundation in web development, covering core concepts such as HTML, CSS, JavaScript, and basic responsive design techniques.",
     timeRange: [new Date(2022, 3), new Date(2022, 5)],
     certificate:
       "https://drive.google.com/file/d/1K0OZm0nKYoRemY7SKg_op4NP1BWkKmmv/view?usp=sharing",

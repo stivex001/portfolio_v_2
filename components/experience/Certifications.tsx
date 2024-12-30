@@ -8,10 +8,19 @@ import SectionDescription from "../sections/SectionDescription";
 import { ExperienceTimeline } from "./ExperienceTimeline";
 import { ExperienceCard } from "./ExperienceCard";
 import { ExperienceImage } from "./ExperienceImage";
-import experienceData, { experienceTimelineCalculator } from "../data/experience";
-import { useSpring, useSpringRef, useTrail, useTransition } from "@react-spring/web";
+import experienceData, {
+  experienceTimelineCalculator,
+} from "../data/experience";
+import {
+  useSpring,
+  useSpringRef,
+  useTrail,
+  useTransition,
+} from "@react-spring/web";
 import { ExperienceControl } from "./ExperienceControl";
-import certificateData, { certificateTimelineCalculator } from "../data/certificate";
+import certificateData, {
+  certificateTimelineCalculator,
+} from "../data/certificate";
 
 type Props = {};
 
@@ -26,7 +35,7 @@ export const Certification = (props: Props) => {
   const [viewed, setViewed] = useState<boolean>(false);
 
   const { YEAR_TIMELINE_POS, MONTH_TIMELINE_HEIGHT } =
-  certificateTimelineCalculator(expertise);
+    certificateTimelineCalculator(expertise);
 
   useEffect(() => {
     if (inView && !viewed) {
@@ -116,12 +125,12 @@ export const Certification = (props: Props) => {
       padding="pt-12 pb-16 md:pt-8 md:pb-[224px]"
     >
       <SectionHeader mode="standalone">
-        My <span className="text-blue-100 dark:blue-d-200">Certifications</span> 
-    
+        My <span className="text-blue-100 dark:blue-d-200">Certifications</span>
       </SectionHeader>
       <SectionDescription>
-        A display of my growth as a frontend developer, showcasing the progress
-        I have achieved and the valuable experience I`&apos;ve acquired
+        A curated showcase of my certifications, reflecting the skills and
+        expertise I&apos;ve gained through dedicated learning and professional
+        development in web and software technologies.
       </SectionDescription>
       <div aria-label="experience carousel">
         <div
@@ -137,7 +146,10 @@ export const Certification = (props: Props) => {
             monthTimeLineMarker={monthTimeLineMarker}
           />
           <ExperienceCard expertise={expertise} contentReveal={contentReveal} />
-          <ExperienceImage imageTransition={imageTransition} data={certificateData.certificate}/>
+          <ExperienceImage
+            imageTransition={imageTransition}
+            data={certificateData.certificate}
+          />
         </div>
       </div>
       <ExperienceControl
