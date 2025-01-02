@@ -3,8 +3,8 @@ import { Navigation } from "@/components/navigation/Navigation";
 import SkipToContent from "@/components/SkipToContent";
 import React from "react";
 import { AboutMe } from "@/components/About/AboutMe";
-import { Experience } from "@/components/experience/Experience";
 import { Certification } from "@/components/experience/Certifications";
+import FeaturedProjects from "@/components/featured-projects/FeaturedProjects";
 
 const Page = () => {
   return (
@@ -15,6 +15,7 @@ const Page = () => {
       <AboutMe />
       {/* <Experience /> */}
       <Certification />
+      <FeaturedProjects />
     </>
   );
 };
