@@ -20,11 +20,11 @@ const expertise: Expertise[] = [
   {
     logo: "/assets/experience/alx.jpeg",
     showcaseImage: "/assets/experience/alx_certificate.png",
-    title: "Alx Software Engineering Programme",
-    subTitle: "Software Engineering",
+    title: "Emplug",
+    subTitle: "Frontend Engineer",
     details:
       "Developed skills in remote pair programming using GitHub, industry-standard git-flow, and daily standups. Mastered algorithms, data structures, and full-stack development.",
-    timeRange: [new Date(2022, 4), new Date(2022, 11)],
+    timeRange: [new Date(2023, 7), new Date()],
     certificate:
       "https://drive.google.com/file/d/1JnYqEnYiRlML8DVMdu_04tf72FKET_1J/view?usp=sharing",
   },

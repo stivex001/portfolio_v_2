@@ -86,12 +86,12 @@ const navigationData: NavigationData = {
           link: "#certifications",
           icon: <PathIcon />,
         },
-        {
-          name: "experience",
-          title: "My Experience as a Developer",
-          link: "#experience",
-          icon: <PathIcon />,
-        },
+        // {
+        //   name: "experience",
+        //   title: "My Experience as a Developer",
+        //   link: "#experience",
+        //   icon: <PathIcon />,
+        // },
       ],
     },
     {

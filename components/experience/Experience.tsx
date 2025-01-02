@@ -123,10 +123,10 @@ export const Experience = (props: Props) => {
     >
       <SectionHeader mode="standalone">
         My <span className="text-blue-100 dark:blue-d-200">Experience</span> as
-        a developer
+        a Software Engineer
       </SectionHeader>
       <SectionDescription>
-        A display of my growth as a frontend developer, showcasing the progress
+        A display of my growth as a Software Engineer, showcasing the progress
         I have achieved and the valuable experience I`&apos;ve acquired
       </SectionDescription>
       <div aria-label="experience carousel">

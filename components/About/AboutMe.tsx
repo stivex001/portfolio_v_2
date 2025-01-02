@@ -117,7 +117,7 @@ export const AboutMe = (props: Props) => {
                 </button>{" "}
                 , I&apos;m a{" "}
                 <strong className="text-grey-1 dark:text-grey-d whitespace-nowrap">
-                  Software Developer
+                  Software Engineer
                 </strong>{" "}
                 (front-end heavy) based in Nigeria. I spend most of my time
                  coding up things for the web, and learning

@@ -13,8 +13,8 @@ const Page = () => {
       <Navigation />
       <MainPage />
       <AboutMe />
+      {/* <Experience /> */}
       <Certification />
-      <Experience />
     </>
   );
 };

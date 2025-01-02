@@ -15,7 +15,7 @@ type Props = {};
 export const NavLinksDesktop = (props: Props) => {
   const [submenuOpen, setSubmenuOpen] = useState<AnchorName | null>(null);
   const { userScrolling } = useUserScrolling();
-  const activeSection = useActiveSection();
+  const activeSection: keyof typeof activeSectionMarker = useActiveSection();
   const scrollDirection = useScrollDirection();
   const activeNavSpring = useSpring({
     from: { y: 0 },
