@@ -59,7 +59,7 @@ export default function FeaturedProjectsDesktop(props: FeaturedProjectProps) {
       opacity: 1,
       config: {tension: 400, friction: 40},
     });
-  }, [projectIndex]);
+  }, [projectIndex, contentRevealTrailRef, displayTransisitionRef]);
 
   const {
     observedRef,

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useRef } from "react";
 import { FeaturedProjectSwiperProps } from "../props";
 import { Swiper, SwiperClass, SwiperRef, SwiperSlide } from "swiper/react";
@@ -16,6 +17,7 @@ export default function FeaturedProjectSwiper({
   const swiperRef = useRef<SwiperRef>(null);
   const swiperApi = swiperRef.current?.swiper;
   const featuredProjectHeaderRefs = projects.map((_) => useRef<HTMLAnchorElement>(null));
+  
 
   function handleSwiperChange(swiper: SwiperClass) {
     setProjectIndex(swiper.activeIndex);

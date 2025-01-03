@@ -1,10 +1,11 @@
-"use client"
-
+"use client";
+/* eslint-disable react-hooks/rules-of-hooks */
 import { a } from "@react-spring/web";
 import { useSpring } from "@react-spring/web";
 import { FeaturedProjectTabListProps } from "../props";
 import { useRef } from "react";
 import FeaturedProjectTag from "../FeaturedProjectTag";
+import Image from "next/image";
 
 export default function FeaturedProjectTabList({
   projects,
@@ -22,11 +23,14 @@ export default function FeaturedProjectTabList({
     ${projects[projectIndex].themeColor}
   `;
 
-  const projectTabTriggerRefs = projects.map(() => useRef<HTMLButtonElement>(null));
+  const projectTabTriggerRefs = projects.map(() =>
+    useRef<HTMLButtonElement>(null)
+  );
   function handleKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {
     let newProjectIndex = -1;
     if (event.key === "ArrowLeft") {
-      newProjectIndex = (projectIndex + (projects.length - 1)) % projects.length;
+      newProjectIndex =
+        (projectIndex + (projects.length - 1)) % projects.length;
     } else if (event.key === "ArrowRight") {
       newProjectIndex = (projectIndex + 1) % projects.length;
     } else return;
@@ -76,7 +80,15 @@ export default function FeaturedProjectTabList({
           aria-selected={index === projectIndex}
           onClick={() => setProjectIndex(index)}
         >
-          <div className="mb-2 logo">{project.logo}</div>
+          <div className="mb-2 logo">
+            <Image
+              src={project.logo}
+              alt={project.name}
+              width={40}
+              height={40}
+            
+            />
+          </div>
           <h3 className="font-visby font-extrabold text-[18px] text-grey-1 dark:text-grey-d">
             {project.name}
           </h3>

@@ -23,50 +23,50 @@ export interface Project {
   tags: ProjectTag[];
   link: Record<"github" | "live", string>;
   timeRange: [Date, Date];
-  logo?: React.ReactNode;
+  logo?: string;
   image?: Record<"desktop" | "mobile", string>;
   themeColor?: string;
 }
 
 const projectData: Array<Project> = [
   {
-    name: "Buggo",
-    logo: <AmazonCloneLogo />,
+    name: "PlanetF",
+    logo: "/assets/projects/planetf-.png",
     image: {
-      desktop: "/assets/projects/buggo.webp",
-      mobile: "/assets/projects/buggo-mobile.webp",
+      desktop: "/assets/projects/planetf_web.png",
+      mobile: "/assets/projects/planetf_mobile.png",
     },
-    timeRange: [new Date(2023, 1), new Date(2023, 2)],
+    timeRange: [new Date(2023, 3), new Date(2023, 11)],
     description:
-      "A real-time bug tracking application that allows you to create projects and tickets, while offering advanced filtering and search options, along with secure user authentication",
-    tags: ["next-js", "redux", "node-js", "mongodb"],
+      "PlanetF is an app that sells mobile data, Airtime, TV subscription payment, Educational payment, Electricity bill payment and confirmation of business registration for her users",
+      tags: ["Nextjs", "Zustand", "Tanstack Query", "Taiwind CSS", "React Hook Form", "Zod"],
     link: {
-      github: "https://github.com/okoyecharles/buggo",
-      live: "https://buggo.vercel.app",
+      github: "https://github.com/stivex001/planetF_v1",
+      live: "https://www.planetf.ng",
     },
     themeColor: "[--rotating-gradient-border-color:#0079C9]",
   },
   {
     name: "Amazon Clone",
-    logo: <AmazonCloneLogo />,
+    logo: "/assets/projects/planetf_web.png",
     image: {
       desktop: "/assets/projects/amazon-clone.webp",
       mobile: "/assets/projects/amazon-clone-mobile.webp",
     },
     timeRange: [new Date(2022, 9), new Date(2022, 11)],
     description:
-      "Explore an Amazon-inspired clone website with authentication, purchase capabilities, and a Redux-powered cart system",
-    tags: ["react", "redux", "firebase"],
+      "PlanetF is an app that sells mobile data, Airtime, TV subscription payment, Educational payment, Electricity bill payment and confirmation of business registration for her users",
+    tags: ["Nextjs", "Zustand", "Tanstack Query", "Taiwind CSS", "React Hook Form", "Zod"],
     link: {
-      github: "https://github.com/okoyecharles/amazon-clone",
-      live: "https://clone-f50ae.web.app",
+      github: "https://github.com/stivex001/planetF_v1",
+      live: "https://www.planetf.ng",
     },
     themeColor:
       "[--rotating-gradient-border-color:#666] dark:[--rotating-gradient-border-color:#999]",
   },
   {
     name: "Lavish Cuisine",
-    logo:<AmazonCloneLogo />,
+    logo: "/assets/projects/planetf_web.png",
     image: {
       desktop: "/assets/projects/lavish-cuisine.webp",
       mobile: "/assets/projects/lavish-cuisine-mobile.webp",

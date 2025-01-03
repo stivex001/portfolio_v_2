@@ -83,20 +83,20 @@ const FeaturedProjectViewer = ({
         <a.div
           className={`
           project-viewer absolute inset-8 md:inset-16 rounded-[10px] overflow-hidden
-          bg-grey-ea dark:bg-black
+          bg-grey-ea dark:bg-secondary
           ring-grey-d dark:ring-grey-3 ring-1
           grid grid-rows-auto
         `}
           style={openViewerSpring}
         >
-          <header className="flex p-4 bg-white dark:bg-grey-15 items-center ring-grey-d dark:ring-grey-3 ring-1">
+          <header className="flex p-4 bg-white dark:bg-primary/50 items-center ring-grey-d dark:ring-primary ring-1">
             <ImageIcon />
             <h3 className="font-semibold text-grey-1 dark:text-grey-b ml-4">
               {project.name}
             </h3>
             <button
               ref={closeButtonRef}
-              className="ml-auto leading-[1] py-1 px-[6px] bg-grey-ea dark:bg-grey-1 ring-1 ring-grey-b dark:ring-grey-4 rounded-sm text-grey-1 dark:text-grey-b select-none hover:bg-grey-d dark:hover:bg-black hover:ring-grey-9 dark:hover:ring-grey-6 transition-colors"
+              className="ml-auto leading-[1] py-1 px-[6px] bg-grey-ea dark:bg-primary ring-1 ring-grey-b dark:ring-grey-4 rounded-sm text-grey-1 dark:text-grey-b select-none hover:bg-grey-d dark:hover:bg-black hover:ring-grey-9 dark:hover:ring-grey-6 transition-colors"
               aria-label="close project viewer"
               aria-hidden={!open}
               onClick={() => setOpen(false)}
@@ -126,7 +126,7 @@ const FeaturedProjectViewer = ({
             ))}
             <div className="viewer-toggle-container absolute bottom-4 right-4">
               <div
-                className="viewer-toggle p-1 flex ring-1 ring-grey-b dark:ring-grey-4 rounded-[20px] relative isolate overflow-hidden self-start bg-white dark:bg-grey-15"
+                className="viewer-toggle p-1 flex ring-1 ring-grey-b dark:ring-primary rounded-[20px] relative isolate overflow-hidden self-start bg-white dark:bg-primary"
                 role="radiogroup"
                 aria-label="view toggle"
               >

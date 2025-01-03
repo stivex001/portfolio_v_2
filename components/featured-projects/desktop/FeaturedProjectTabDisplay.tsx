@@ -1,4 +1,4 @@
-
+/* eslint-disable react-hooks/rules-of-hooks */
 import { FeaturedProjectTabDisplayProps } from "../props";
 import { a, useSpring, useTrail } from "@react-spring/web";
 import Image from "next/image";
@@ -69,7 +69,7 @@ export default function FeaturedProjectTabDisplay({
             >
               <button
                 className={
-                  "bg-grey-ea dark:bg-grey-2 ring-1 ring-grey-b dark:ring-grey-3 rounded-[16px] flex group/icon items-center px-2 hover:bg-grey-d hover:ring-grey-9 dark:hover:bg-grey-2 dark:hover:ring-grey-5 absolute -top-[48px] left-[10%] transition-all"
+                  "bg-grey-ea dark:bg-primary/50 ring-1 ring-grey-b dark:ring-grey-3 rounded-[16px] flex group/icon items-center px-2 hover:bg-grey-d hover:ring-grey-9 dark:hover:bg-grey-2 dark:hover:ring-grey-5 absolute -top-[48px] left-[10%] transition-all"
                 }
                 onClick={() => openProjectViewer("desktop")}
                 aria-label="show desktop view"
@@ -112,7 +112,7 @@ export default function FeaturedProjectTabDisplay({
             >
               <button
                 className={
-                  "bg-grey-ea dark:bg-grey-2 ring-1 ring-grey-b dark:ring-grey-3 rounded-[16px] flex group/icon items-center px-2 hover:bg-grey-d hover:ring-grey-9 dark:hover:bg-grey-2 dark:hover:ring-grey-5 absolute -top-[48px] right-0 transition-all"
+                  "bg-grey-ea dark:bg-primary/50 ring-1 ring-grey-b dark:ring-grey-3 rounded-[16px] flex group/icon items-center px-2 hover:bg-grey-d hover:ring-grey-9 dark:hover:bg-grey-2 dark:hover:ring-grey-5 absolute -top-[48px] right-0 transition-all"
                 }
                 aria-label="show mobile view"
                 onClick={() => openProjectViewer("mobile")}
