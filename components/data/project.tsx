@@ -39,7 +39,14 @@ const projectData: Array<Project> = [
     timeRange: [new Date(2023, 3), new Date(2023, 11)],
     description:
       "PlanetF is an app that sells mobile data, Airtime, TV subscription payment, Educational payment, Electricity bill payment and confirmation of business registration for her users",
-      tags: ["Nextjs", "Zustand", "Tanstack Query", "Taiwind CSS", "React Hook Form", "Zod"],
+    tags: [
+      "Nextjs",
+      "Zustand",
+      "Tanstack Query",
+      "Taiwind CSS",
+      "React Hook Form",
+      "Zod",
+    ],
     link: {
       github: "https://github.com/stivex001/planetF_v1",
       live: "https://www.planetf.ng",
@@ -47,19 +54,26 @@ const projectData: Array<Project> = [
     themeColor: "[--rotating-gradient-border-color:#0079C9]",
   },
   {
-    name: "Amazon Clone",
-    logo: "/assets/projects/planetf_web.png",
+    name: "CryptoCrest",
+    logo: "/assets/projects/crest-logo.png",
     image: {
-      desktop: "/assets/projects/amazon-clone.webp",
-      mobile: "/assets/projects/amazon-clone-mobile.webp",
+      desktop: "/assets/projects/cryptocrest-web.png",
+      mobile: "/assets/projects/cryptocrest-mobile.png",
     },
-    timeRange: [new Date(2022, 9), new Date(2022, 11)],
+    timeRange: [new Date(2024, 5), new Date(2024, 9)],
     description:
-      "PlanetF is an app that sells mobile data, Airtime, TV subscription payment, Educational payment, Electricity bill payment and confirmation of business registration for her users",
-    tags: ["Nextjs", "Zustand", "Tanstack Query", "Taiwind CSS", "React Hook Form", "Zod"],
+      "CryptoCrest is trading platform  provide tight spreads regardless of market volatility, delivering competitive and reliable pricing. We offer attractive spreads right across our product range, from 0.5 pips on EUR/USD, 1 point on key indices like the UK 100, and 0.2 points on Gold. Our margin rates start from 3.3% for forex, 5% for indices and commodities, and 20% for shares and treasuries.",
+    tags: [
+      "Reactjs",
+      "Firebase",
+      "Tanstack Query",
+      "Taiwind CSS",
+      "React Hook Form",
+      "Zod",
+    ],
     link: {
-      github: "https://github.com/stivex001/planetF_v1",
-      live: "https://www.planetf.ng",
+      github: "https://github.com/stivex001/Cryptocrest",
+      live: "https://cryptocrest.vercel.app",
     },
     themeColor:
       "[--rotating-gradient-border-color:#666] dark:[--rotating-gradient-border-color:#999]",
