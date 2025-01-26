@@ -79,19 +79,19 @@ const projectData: Array<Project> = [
       "[--rotating-gradient-border-color:#666] dark:[--rotating-gradient-border-color:#999]",
   },
   {
-    name: "Lavish Cuisine",
-    logo: "/assets/projects/planetf_web.png",
+    name: "Inventinspire Limited",
+    logo: "/assets/projects/invent_logo.png",
     image: {
-      desktop: "/assets/projects/lavish-cuisine.webp",
-      mobile: "/assets/projects/lavish-cuisine-mobile.webp",
+      desktop: "/assets/projects/invent_desktop.png",
+      mobile: "/assets/projects/invent_mobile.png",
     },
     timeRange: [new Date(2022, 7), new Date(2022, 8)],
     description:
-      "Explore global cuisines with a meal-based website, categorizing dishes by countries and enabling ingredient-based meal searches",
-    tags: ["react", "redux", "typescript"],
+      "Inventinspire Limited is a platform that allows users to trade forex efficiently, providing real-time market data, advanced charting tools, and secure transaction processing.",
+    tags: ["react", "redux", "typescript", "Firebase", "Tailwind Css"],
     link: {
-      github: "https://github.com/okoyecharles/lavish-cuisine",
-      live: "https://lavish-cuisine.web.app",
+      github: "https://github.com/godwinopara/trade-vista",
+      live: "https://trade-vista-six.vercel.app/",
     },
     themeColor: "[--rotating-gradient-border-color:#C0841D]",
   },
