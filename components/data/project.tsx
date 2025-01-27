@@ -96,14 +96,14 @@ const projectData: Array<Project> = [
     themeColor: "[--rotating-gradient-border-color:#C0841D]",
   },
   {
-    name: "To do List",
-    timeRange: [new Date(2023, 7), new Date(2023, 8)],
+    name: "Mike Rik",
+    timeRange: [new Date(2022, 11), new Date(2023, 1)],
     description:
-      "To do list app using Express, MongoDB, and Google authentication for seamless task management across devices",
-    tags: ["next-js", "mongodb", "node-js"],
+      "Our mission is to redefine excellence in Agro-food processing by consistently delivering sustainable and innovative food products that cater to the diverse needs of our valued customers",
+    tags: ["next-js", "tailwind css", "typescript"],
     link: {
-      github: "https://github.com/okoyecharles/todo-list-nextjs",
-      live: "https://the-tasks.vercel.app",
+      github: "https://github.com/stivex001/mike-rik",
+      live: "https://www.mikerikltd.com.ng",
     },
   },
   {
