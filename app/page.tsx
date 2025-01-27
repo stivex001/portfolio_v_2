@@ -5,6 +5,7 @@ import React from "react";
 import { AboutMe } from "@/components/About/AboutMe";
 import { Certification } from "@/components/experience/Certifications";
 import FeaturedProjects from "@/components/featured-projects/FeaturedProjects";
+import Projects from "@/components/project/Projects";
 
 const Page = () => {
   return (
@@ -16,6 +17,7 @@ const Page = () => {
       {/* <Experience /> */}
       <Certification />
       <FeaturedProjects />
+      <Projects />
     </>
   );
 };

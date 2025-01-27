@@ -39,7 +39,7 @@ const FeaturedProjectViewer = ({
         window.removeEventListener("keydown", handleMouseDown);
       };
     }
-  }, [open]);
+  }, [open, handleMouseDown]);
 
   const openViewerSpring = useSpring({
     scale: open ? 1 : 0.95,
