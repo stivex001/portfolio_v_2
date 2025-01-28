@@ -106,60 +106,60 @@ const projectData: Array<Project> = [
       live: "https://www.mikerikltd.com.ng",
     },
   },
-  {
-    name: "Save A Child",
-    timeRange: [new Date(2022, 5), new Date(2022, 6)],
-    description:
-      "A website dedicated to supporting underprivileged children in developing countries worldwide, facilitating a positive impact on the lives of these children",
-    tags: ["html", "css", "javascript"],
-    link: {
-      github: "https://github.com/okoyecharles/save-a-child",
-      live: "https://saveachild.vercel.app",
-    },
-  },
-  {
-    name: "Ex Portfolio",
-    timeRange: [new Date(2022, 11), new Date(2023, 1)],
-    description: "My previous portfolio",
-    tags: ["next-js", "redux", "typescript", "scss"],
-    link: {
-      github: "https://github.com/okoyecharles/portfolio-v2",
-      live: "https://okoyecharles-v2.vercel.app",
-    },
-  },
-  {
-    name: "Nethub",
-    timeRange: [new Date(2022, 6), new Date(2022, 8)],
-    description:
-      "A dynamic website featuring an extensive collection of movies sourced from a movie API implemented with robust filter and search capabilities",
-    tags: ["html", "css", "javascript"],
-    link: {
-      github: "https://github.com/okoyecharles/Nethub",
-      live: "https://okoyecharles.github.io/Nethub",
-    },
-  },
-  {
-    name: "Space Traveler Hub",
-    timeRange: [new Date(2022, 6), new Date(2022, 7)],
-    description:
-      "An application that fetches and displays real-time rocket information, join missions and reserve rockets in this intuitive SPA",
-    tags: ["react", "redux"],
-    link: {
-      github: "https://github.com/okoyecharles/space-travelers-hub",
-      live: "https://charles-space-travelers.netlify.app",
-    },
-  },
-  {
-    name: "Type Effect Library",
-    timeRange: [new Date(2022, 5), new Date(2022, 6)],
-    description:
-      "A light-weight, open-source typing-effect library that enables users to add typing effects to DOM text elements",
-    tags: ["javascript"],
-    link: {
-      github: "https://github.com/okoyecharles/Type-Effect-Library",
-      live: "https://okoyecharles.github.io/Type-Effect-Library",
-    },
-  },
+  // {
+  //   name: "Save A Child",
+  //   timeRange: [new Date(2022, 5), new Date(2022, 6)],
+  //   description:
+  //     "A website dedicated to supporting underprivileged children in developing countries worldwide, facilitating a positive impact on the lives of these children",
+  //   tags: ["html", "css", "javascript"],
+  //   link: {
+  //     github: "https://github.com/okoyecharles/save-a-child",
+  //     live: "https://saveachild.vercel.app",
+  //   },
+  // },
+  // {
+  //   name: "Ex Portfolio",
+  //   timeRange: [new Date(2022, 11), new Date(2023, 1)],
+  //   description: "My previous portfolio",
+  //   tags: ["next-js", "redux", "typescript", "scss"],
+  //   link: {
+  //     github: "https://github.com/okoyecharles/portfolio-v2",
+  //     live: "https://okoyecharles-v2.vercel.app",
+  //   },
+  // },
+  // {
+  //   name: "Nethub",
+  //   timeRange: [new Date(2022, 6), new Date(2022, 8)],
+  //   description:
+  //     "A dynamic website featuring an extensive collection of movies sourced from a movie API implemented with robust filter and search capabilities",
+  //   tags: ["html", "css", "javascript"],
+  //   link: {
+  //     github: "https://github.com/okoyecharles/Nethub",
+  //     live: "https://okoyecharles.github.io/Nethub",
+  //   },
+  // },
+  // {
+  //   name: "Space Traveler Hub",
+  //   timeRange: [new Date(2022, 6), new Date(2022, 7)],
+  //   description:
+  //     "An application that fetches and displays real-time rocket information, join missions and reserve rockets in this intuitive SPA",
+  //   tags: ["react", "redux"],
+  //   link: {
+  //     github: "https://github.com/okoyecharles/space-travelers-hub",
+  //     live: "https://charles-space-travelers.netlify.app",
+  //   },
+  // },
+  // {
+  //   name: "Type Effect Library",
+  //   timeRange: [new Date(2022, 5), new Date(2022, 6)],
+  //   description:
+  //     "A light-weight, open-source typing-effect library that enables users to add typing effects to DOM text elements",
+  //   tags: ["javascript"],
+  //   link: {
+  //     github: "https://github.com/okoyecharles/Type-Effect-Library",
+  //     live: "https://okoyecharles.github.io/Type-Effect-Library",
+  //   },
+  // },
 ];
 
 export default projectData;
