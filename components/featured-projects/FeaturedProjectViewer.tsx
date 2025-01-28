@@ -1,5 +1,5 @@
 "use client";
-import React, { SyntheticEvent, useEffect, useRef } from "react";
+import React, { SyntheticEvent, useEffect, useRef, useCallback } from "react";
 import { FeaturedProjectViewerProps } from "./props";
 import { a, useSpring, useTransition } from "@react-spring/web";
 import ImageIcon from "../svg/abstract/ImageIcon";
@@ -24,12 +24,12 @@ const FeaturedProjectViewer = ({
     }
   }
 
-  function handleMouseDown(e: KeyboardEvent) {
+  const handleMouseDown = useCallback((e: KeyboardEvent) => {
     if (e.key == "Escape") {
       e.preventDefault();
       setOpen(false);
     }
-  }
+  }, [setOpen]);
 
   useEffect(() => {
     if (open) {
@@ -39,7 +39,7 @@ const FeaturedProjectViewer = ({
         window.removeEventListener("keydown", handleMouseDown);
       };
     }
-  }, [open]);
+  }, [open, handleMouseDown]);
 
   const openViewerSpring = useSpring({
     scale: open ? 1 : 0.95,

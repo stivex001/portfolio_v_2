@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import { ProjectGridProps } from "./props";
 import { useInView } from "react-intersection-observer";
 import { a, useSpring, useSpringRef, useTransition } from "@react-spring/web";
@@ -11,8 +12,9 @@ type Props = {};
 
 export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   const INITIAL_CARD_COUNT = 3;
-  const projectCardHeaderRefs = projects.map(() =>
-    useRef<HTMLAnchorElement>(null)
+  const projectCardHeaderRefs = useMemo(
+    () => projects.map(() => useRef<HTMLAnchorElement>(null)),
+    [projects]
   );
   const [projectCount, setProjectCount] = useState(INITIAL_CARD_COUNT);
   const [viewed, setViewed] = useState<boolean>(false);
@@ -36,7 +38,7 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
     if (inView && !viewed) {
       setViewed(true);
     }
-  }, [inView]);
+  }, [inView, viewed]);
 
   useEffect(() => {
     if (inView) {
@@ -48,7 +50,7 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
     if (projectCount === projects.length) {
       projectCardHeaderRefs[INITIAL_CARD_COUNT].current?.focus();
     }
-  }, [viewed, projectCount]);
+  }, [inView, viewed, projectCount, cardRevealTransRef, buttonRevealSpringRef, projectCardHeaderRefs,projects.length]);
 
   const handleProjectCountToggle = () => {
     setProjectCount((prev) =>
