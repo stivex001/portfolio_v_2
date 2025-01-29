@@ -6,6 +6,7 @@ import { AboutMe } from "@/components/About/AboutMe";
 import { Certification } from "@/components/experience/Certifications";
 import FeaturedProjects from "@/components/featured-projects/FeaturedProjects";
 import Projects from "@/components/project/Projects";
+import Recommendations from "@/components/recommendation/Recommendations";
 
 const Page = () => {
   return (
@@ -18,6 +19,7 @@ const Page = () => {
       <Certification />
       <FeaturedProjects />
       <Projects />
+      <Recommendations />
     </>
   );
 };
