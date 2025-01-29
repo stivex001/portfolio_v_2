@@ -24,7 +24,7 @@ const Recommendations = (props: Props) => {
         with professionals across the globe
       </SectionHeader>
       <SectionDescription>
-        Endorsements from skilled developers I've had the honor of working with.
+        Endorsements from skilled developers I&apos;ve had the honor of working with.
       </SectionDescription>
       <RecommendationSwiper
         recommendations={recommedations}

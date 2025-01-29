@@ -46,14 +46,14 @@ export const RecommendationSwiper = ({
     if (inView && !viewed) {
       setViewed(true);
     }
-  }, [inView]);
+  }, [inView, viewed]);
 
   useEffect(() => {
     if (inView) {
       cardTransitionRef.start();
       earthRotationSpringRef.start({
-        rotation: recommendations[recommendationIndex].coordinates.map((coord) =>
-          percentToRadians(coord)
+        rotation: recommendations[recommendationIndex].coordinates.map(
+          (coord) => percentToRadians(coord)
         ),
         onStart: () => setEarthRotating(true),
         onRest: () => setEarthRotating(false),
@@ -63,7 +63,15 @@ export const RecommendationSwiper = ({
         opacity: 1,
       });
     }
-  }, [viewed, recommendationIndex]);
+  }, [
+    viewed,
+    recommendationIndex,
+    cardTransitionRef,
+    earthRotationSpringRef,
+    earthViewedSpringRef,
+    inView,
+    recommendations,
+  ]);
 
   return (
     <div
