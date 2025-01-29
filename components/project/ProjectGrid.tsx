@@ -12,9 +12,7 @@ type Props = {};
 
 export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   const INITIAL_CARD_COUNT = 3;
-  const projectCardHeaderRefs = useRef<
-    Array<React.RefObject<HTMLAnchorElement>>
-  >(projects.map(() => React.createRef<HTMLAnchorElement>()));
+  const projectCardHeaderRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const [projectCount, setProjectCount] = useState(INITIAL_CARD_COUNT);
   const [viewed, setViewed] = useState<boolean>(false);
@@ -35,6 +33,10 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   }));
 
   useEffect(() => {
+    projectCardHeaderRefs.current = projects.map(() => null);
+  }, [projects]);
+
+  useEffect(() => {
     if (inView && !viewed) {
       setViewed(true);
     }
@@ -47,8 +49,11 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
       // button reveal animation
       buttonRevealSpringRef.start({ opacity: 1, delay: 250 });
     }
-    if (projectCount === projects.length) {
-      projectCardHeaderRefs.current[INITIAL_CARD_COUNT]?.current?.focus();
+    if (
+      projectCount === projects?.length &&
+      projectCardHeaderRefs.current[INITIAL_CARD_COUNT]
+    ) {
+      projectCardHeaderRefs.current[INITIAL_CARD_COUNT]?.focus();
     }
   }, [
     inView,
@@ -80,7 +85,8 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
           >
             <ProjectCard
               project={project}
-              headerRef={projectCardHeaderRefs.current[index]}
+              headerRef={(el:any) => (projectCardHeaderRefs.current[index] = el)}
+
             />
           </a.div>
         ))}
