@@ -16,7 +16,7 @@ const recommendationData: Array<Recommendation> = [
       "Charles and I worked together on a couple of projects, and I appreciate his skills and discipline.",
       "He has the focus and skills that keep him and his team productive during intense crunch periods. I couldn’t recommend him more for any business looking for new talent.",
     ],
-    location: "Ontario, Canada",
+    location: "Abuja, Nigeria",
     coordinates: [10, 2.4, 0],
   },
   {
