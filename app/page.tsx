@@ -18,7 +18,7 @@ const Page = () => {
       {/* <Experience /> */}
       <Certification />
       <FeaturedProjects />
-      {/* <Projects /> */}
+      <Projects />
       {/* <Recommendations /> */}
     </>
   );
