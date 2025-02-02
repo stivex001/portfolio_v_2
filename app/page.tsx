@@ -18,8 +18,8 @@ const Page = () => {
       {/* <Experience /> */}
       <Certification />
       <FeaturedProjects />
-      <Projects />
-      <Recommendations />
+      {/* <Projects /> */}
+      {/* <Recommendations /> */}
     </>
   );
 };
