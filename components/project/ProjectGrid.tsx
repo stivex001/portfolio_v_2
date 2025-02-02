@@ -12,12 +12,10 @@ type Props = {};
 
 export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   const INITIAL_CARD_COUNT = 3;
-  // const projectCardHeaderRefs = useMemo(
-  //   () => projects.map(() => useRef<HTMLAnchorElement>(null)),
-  //   [projects]
-  // );
-  const projectCardHeaderRefs = useRef<(HTMLAnchorElement | null)[]>([]);
-
+  const projectCardHeaderRefs = useMemo(
+    () => projects.map(() => useRef<HTMLAnchorElement>(null)),
+    [projects]
+  );
   const [projectCount, setProjectCount] = useState(INITIAL_CARD_COUNT);
   const [viewed, setViewed] = useState<boolean>(false);
   const { ref, inView } = useInView({
@@ -37,10 +35,6 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   }));
 
   useEffect(() => {
-    projectCardHeaderRefs.current = projects.map(() => null);
-  }, [projects]);
-
-  useEffect(() => {
     if (inView && !viewed) {
       setViewed(true);
     }
@@ -53,11 +47,8 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
       // button reveal animation
       buttonRevealSpringRef.start({ opacity: 1, delay: 250 });
     }
-    if (
-      projectCount === projects.length &&
-      projectCardHeaderRefs.current[INITIAL_CARD_COUNT]
-    ) {
-      projectCardHeaderRefs.current[INITIAL_CARD_COUNT]?.focus();
+    if (projectCount === projects.length) {
+      projectCardHeaderRefs[INITIAL_CARD_COUNT].current?.focus();
     }
   }, [
     inView,
@@ -82,16 +73,10 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
         ref={ref}
       >
         {cardRevealTransition((style, project, _transition, index) => (
-          <a.div
-            className="project-card-container"
-            style={style}
-            key={project.name}
-          >
+          <a.div className="project-card-container" style={style} key={project.name}>
             <ProjectCard
               project={project}
-              headerRef={(el: any) =>
-                (projectCardHeaderRefs.current[index] = el)
-              }
+              headerRef={projectCardHeaderRefs[index]}
             />
           </a.div>
         ))}
