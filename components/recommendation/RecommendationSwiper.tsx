@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { a, useSpring, useSpringRef, useTransition } from "@react-spring/web";
 import { useSpring as useThreeSpring } from "@react-spring/three";
 import { percentToRadians } from "@/utils/convertion";
+import EarthThree from "../react-three/EarthThree";
 
 type Props = {};
 
@@ -83,7 +84,9 @@ export const RecommendationSwiper = ({
         className="aspect-square w-full h-full max-w-[375px] max-h-[375px] semi-lg:max-w-[450px] semi-lg:max-h-[450px] relative self-center"
         ref={observedRef}
         style={earthViewedSpring}
-      ></a.div>
+      >
+        <EarthThree rotationSpring={earthRotationSpring} setLoaded={setEarthLoaded} />
+      </a.div>
     </div>
   );
 };

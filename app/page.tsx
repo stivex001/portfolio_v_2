@@ -19,7 +19,7 @@ const Page = () => {
       <Certification />
       <FeaturedProjects />
       <Projects />
-      {/* <Recommendations /> */}
+      <Recommendations />
     </>
   );
 };
