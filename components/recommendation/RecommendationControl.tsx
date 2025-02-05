@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+"use client";
 import React, { useRef } from "react";
 import { RecommendationControlProps } from "./props";
 
