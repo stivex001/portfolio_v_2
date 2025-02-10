@@ -6,6 +6,7 @@ import SectionHeader from "../sections/SectionHeader";
 import SectionDescription from "../sections/SectionDescription";
 import recommendationData from "./recommendation";
 import { RecommendationSwiper } from "./RecommendationSwiper";
+import { RecommendationControl } from "./RecommendationControl";
 
 type Props = {};
 
@@ -31,12 +32,12 @@ const Recommendations = (props: Props) => {
         recommendationIndex={recommedationIndex}
         setRecommedationIndex={setRecommedationIndex}
       />
-      {/* <RecommendationControl
+      <RecommendationControl
         recommendations={recommedations}
         recommendationCount={recommedations.length}
         recommendationIndex={recommedationIndex}
         setRecommedationIndex={setRecommedationIndex}
-      /> */}
+      />
     </Section>
   );
 };

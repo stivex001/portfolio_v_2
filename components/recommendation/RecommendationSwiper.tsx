@@ -93,12 +93,12 @@ export const RecommendationSwiper = ({
 
   return (
     <div
-      className="flex flex-col gap-[36px] md:flex-row justify-between recommendations-swiper my-8 md:my-2 semi-lg:mx-12 relative"
+      className="flex flex-col gap-[36px] md:flex-row justify-between recommendations-swiper my-8 md:my-2 lg:mx-12 relative"
       id="recommendation-carousel"
       aria-label="recommendation carousel"
     >
       <a.div
-        className="aspect-square w-full h-full max-w-[375px] max-h-[375px] semi-lg:max-w-[450px] semi-lg:max-h-[450px] relative self-center"
+        className="aspect-square w-full h-full max-w-[375px] max-h-[375px] lg:max-w-[450px] lg:max-h-[450px] relative self-center"
         ref={observedRef}
         style={earthViewedSpring}
       >
@@ -150,7 +150,7 @@ export const RecommendationSwiper = ({
           </div>
         ) : null}
       </a.div>
-      <div className="card-container min-h-[400px] grid place-items-center relative mr-0 md:mr-[24px] semi-lg:mr-0 px-[12px] md:px-0 isolate">
+      <div className="card-container min-h-[400px] grid place-items-center relative mr-0 md:mr-[24px] lg:mr-0 px-[12px] md:px-0 isolate">
         {cardTransition((style, cardIndex) => (
           <RecommendationCard
             recommendation={recommendations[cardIndex]}
@@ -162,7 +162,7 @@ export const RecommendationSwiper = ({
           className={`
             z-10 group/icon 
             w-[48px] aspect-square rounded-[50%] grid place-items-center
-            absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[12px] md:-translate-x-[36px] semi-lg:-translate-x-[60px] backdrop-blur-sm
+            absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[12px] md:-translate-x-[36px] lg:-translate-x-[60px] backdrop-blur-sm
 
             ring-1 ring-grey-b dark:ring-grey-4
             bg-grey-d/50 dark:bg-grey-3/50
@@ -187,7 +187,7 @@ export const RecommendationSwiper = ({
           className={`
             z-10 group/icon 
             w-[48px] aspect-square rounded-[50%] grid place-items-center 
-            absolute top-1/2 right-0 -translate-y-1/2 translate-x-[12px] md:translate-x-[36px] semi-lg:translate-x-[60px] backdrop-blur-[2px]
+            absolute top-1/2 right-0 -translate-y-1/2 translate-x-[12px] md:translate-x-[36px] lg:translate-x-[60px] backdrop-blur-[2px]
 
             ring-1 ring-grey-b dark:ring-grey-4
             bg-grey-d/50 dark:bg-grey-3/50
