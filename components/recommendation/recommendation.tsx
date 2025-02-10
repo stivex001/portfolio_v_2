@@ -9,92 +9,59 @@ export type Recommendation = {
 
 const recommendationData: Array<Recommendation> = [
   {
+    author: "Okoli Johnson",
+    occupation: "Lead Software Engineer",
+    image: "/assets/recommendations/okoli.jpg",
+    description: [
+      "Stephen is an exceptional developer with a strong work ethic and a passion for excellence. His dedication and problem-solving abilities make him an invaluable asset to any team.",
+      "His drive and technical competence are truly inspiring. Without a doubt, he has a bright future ahead of him.",
+    ],
+    location: "Manchester, United Kingdom",
+    coordinates: [53.483959, -2.244644, 0], 
+  },
+  {
     author: "Collins Nwoko",
-    image: "/assets/recommendations/stephen.jpg",
+    image: "/assets/recommendations/collins.jpg",
     occupation: "Full-Stack Developer",
     description: [
-      "Stephen and I worked together on a couple of projects, and I appreciate his skills and discipline.",
-      "He has the focus and skills that keep him and his team productive during intense crunch periods. I couldn’t recommend him more for any business looking for new talent.",
+      "Having collaborated with Stephen on multiple projects, I deeply admire his technical skills and disciplined approach.",
+      "He maintains a high level of focus, ensuring productivity even under tight deadlines. Any business looking for top talent would be lucky to have him.",
     ],
     location: "Abuja, Nigeria",
-    coordinates: [10, 2.4, 0],
+    coordinates: [9.05785, 7.49508, 0],
   },
   {
-    author: "Okoli Johnson",
-    occupation: "Web Developer",
-    image: "/assets/recommendations/stephen.jpg",
-    description: [
-      "Stephen is a great guy. His attitude and approach to work are really good. I would love to have him as a part of my team since he is hard-working, smart, and also technically competent.",
-      "To see a young individual as driven as him is inspiring. He definitely has a bright future ahead of him.",
-    ],
-    location: "Dubrovnik, Croatia",
-    coordinates: [7.2, 72.8, 0],
-  },
-  {
-    author: "Mohamed Aachour",
+    author: "Oladapo Ajala",
     occupation: "Software Engineer",
-    image: "/assets/recommendations/stephen.jpg",
+    image: "/assets/recommendations/ajala.jpg",
     description: [
-      "Stephen Okoye is a loyal colleague who understands complex matters.",
-      "He is a strong and goal-oriented team player. With every problem, he suggested a solution. Highly recommended.",
+      "Stephen is a dedicated and insightful professional who approaches challenges with a solution-driven mindset.",
+      "A strong team player with a clear goal-oriented approach, he consistently delivers impactful results. Highly recommended.",
     ],
-    location: "Kenitra, Morocco",
-    coordinates: [4.6, 79.7, 0],
+    location: "Utrecht, Netherlands",
+    coordinates: [52.090736, 5.12142, 0], // Corrected coordinates for Utrecht
   },
   {
-    author: "Tracey Kadenyi",
-    occupation: "Web Developer",
-    image: "/assets/recommendations/stephen.jpg",
+    author: "Folasayo Samuel",
+    occupation: "Software Engineer, Community Manager",
+    image: "/assets/recommendations/folasayo.jpg",
     description: [
-      "There are so many good things I can say about working with Okoye Stephen. He has expert knowledge in JavaScript, and React.js",
-      "Always willing to help a teammate facing a code blocker. Such generosity with knowledge and skill is what makes him easy and fun to work with.",
+      "Stephen brings expert-level JavaScript and React.js knowledge to any team he joins.",
+      "Beyond his technical expertise, he is always eager to support teammates facing challenges, making collaboration with him both productive and enjoyable.",
     ],
-    location: "Nairobi County, Kenya",
-    coordinates: [94.8, 67.5, 0],
+    location: "Lagos, Nigeria",
+    coordinates: [6.5244, 3.3792, 0], // Corrected coordinates for Lagos
   },
   {
-    author: "Aleksandra Ujvari",
-    image: "/assets/recommendations/stephen.jpg",
+    author: "Godwin Opara",
+    image: "/assets/recommendations/godwin.jpg",
     occupation: "Full-Stack Developer",
     description: [
-      "Stephen is a phenomenal developer, his approach to technical problems is incredible.",
-      "We are from different countries and cultures, but we communicated effectively without blockers. If you are looking for a developer with both technical and soft skills, don't hesitate to contact him.",
+      "Stephen’s approach to solving technical problems is both strategic and innovative.",
+      "Despite our different cultural backgrounds, working with him was seamless and rewarding. If you need a developer with both technical expertise and excellent communication skills, he’s the one to call.",
     ],
-    location: "Vojvodina, Serbia",
-    coordinates: [7.8, 72.2, 0],
-  },
-  {
-    author: "Elizabeth Ojesanmi",
-    occupation: "Integration Specialist",
-    image: "/assets/recommendations/stephen.jpg",
-    description: [
-      "When I think about Stephen, the words “hardworking and innovative” spring to mind. Okoye Stephen is someone I've had the pleasure of knowing, and we get along great.",
-      "Stephen is a great guy for any position needing a developer, he has my highest recommendation.",
-    ],
-    location: "Accra, Ghana",
-    coordinates: [96.8, 77.8, 0],
-  },
-  {
-    author: "Ishpaul Singh",
-    occupation: "Frontend Developer",
-    image: "/assets/recommendations/stephen.jpg",
-    description: [
-      "Stephen is very knowledgeable when it comes to working with software tools and technologies, and he is also a very fast learner.",
-      "I really enjoyed our pair-programming sessions together, as he was a helpful and understanding team member.",
-    ],
-    location: "New Delhi, India",
-    coordinates: [3.2, 56.5, 0],
-  },
-  {
-    author: "Sidney Kaguli",
-    occupation: "Full-Stack Developer",
-    image: "/assets/recommendations/stephen.jpg",
-    description: [
-      "I had the pleasure of working with Stephen on a three-week project (with 3 other members), a full-stack reservation app with React and Rails.",
-      "I was particularly impressed by Stephen' ability to handle challenges, whether it's getting to the root of buggy code or getting people on board with ideas.",
-    ],
-    location: "Nairobi County, Kenya",
-    coordinates: [94.8, 67.5, 0],
+    location: "Lagos, Nigeria",
+    coordinates: [6.5244, 3.3792, 0], // Same coordinates as Lagos
   },
 ];
 
