@@ -106,27 +106,28 @@ const projectData: Array<Project> = [
       live: "https://www.mikerikltd.com.ng",
     },
   },
-  // {
-  //   name: "Save A Child",
-  //   timeRange: [new Date(2022, 5), new Date(2022, 6)],
-  //   description:
-  //     "A website dedicated to supporting underprivileged children in developing countries worldwide, facilitating a positive impact on the lives of these children",
-  //   tags: ["html", "css", "javascript"],
-  //   link: {
-  //     github: "https://github.com/okoyecharles/save-a-child",
-  //     live: "https://saveachild.vercel.app",
-  //   },
-  // },
-  // {
-  //   name: "Ex Portfolio",
-  //   timeRange: [new Date(2022, 11), new Date(2023, 1)],
-  //   description: "My previous portfolio",
-  //   tags: ["next-js", "redux", "typescript", "scss"],
-  //   link: {
-  //     github: "https://github.com/okoyecharles/portfolio-v2",
-  //     live: "https://okoyecharles-v2.vercel.app",
-  //   },
-  // },
+  {
+    name: "Quiz App",
+    timeRange: [new Date(2022, 5), new Date(2022, 6)],
+    description:
+      "Goreeva Quiz Hub is a web-based Audience Engagement Cloud Platform for hosting interactive trivia quizzes at in-person, virtual, and hybrid events. No app install is required",
+    tags: ["html", "css", "javascript"],
+    link: {
+      github: "https://github.com/stivex001/quiz_app",
+      live: "https://goreeva-quiz-app.vercel.app/",
+    },
+  },
+  {
+    name: "Social X",
+    timeRange: [new Date(2022, 11), new Date(2023, 1)],
+    description:
+      "BaiSocialX is a community-driven social media platform allowing users to publish photo and video content. It has many similarities to established social media platforms such as Facebook and Instagram, but there is one major difference: SocialX is a decentralised blockchain platform where everyone can earn cryptocurrency SOCX token rewards.",
+    tags: ["react-js", "typescript", "css"],
+    link: {
+      github: "https://github.com/stivex001/bai_fitness",
+      live: "https://baisocialx-y3yj.vercel.app/",
+    },
+  },
   // {
   //   name: "Nethub",
   //   timeRange: [new Date(2022, 6), new Date(2022, 8)],

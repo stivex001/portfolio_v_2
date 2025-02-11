@@ -1,9 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/navigation/Navbar";
 import { AnimationProvider } from "@/components/AnimationProvider";
-import { Navigation } from "@/components/navigation/Navigation";
 import visby from "@/app/fonts/visby";
 import lato from "@/app/fonts/lato";
 import Providers from "@/Providers";
@@ -12,7 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Stephen Adeyemo",
-  description: "Hi there! I'm Stephen, a passionate developer with a strong background in website and systems development. Explore my portfolio to discover my skills, experience, and journey as a programmer.",
+  description:
+    "Hi there! I'm Stephen, a passionate developer with a strong background in website and systems development. Explore my portfolio to discover my skills, experience, and journey as a programmer.",
   keywords: [
     "Stephen Adeyemo",
     "Adeyemo Stephen",
@@ -53,18 +52,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${visby.variable} ${lato.className} h-full scroll-smooth`}>
-      <body className='font-normal bg-white dark:bg-primary font-lato selection:bg-blue-200 dark:selection:bg-blue-300 selection:text-white'>
+    <html
+      lang="en"
+      className={`${visby.variable} ${lato.className} h-full scroll-smooth`}
+    >
+      <body className="font-normal bg-white dark:bg-primary font-lato selection:bg-blue-200 dark:selection:bg-blue-300 selection:text-white">
         <AnimationProvider>
-          {/* <Navigation />
-          <div>{children}</div> */}
-          {/* <div className="w-screen min-h-screen bg-grad bg-no-repeat bg-cover">
-            <div className="h-24">
-              <Navigation />
-            </div>
-            <div className="h-[calc(100vh-6rem)] ">{children}</div>
-          </div> */}
-           <Providers >{children}</Providers>
+          <Providers>{children}</Providers>
         </AnimationProvider>
       </body>
     </html>
