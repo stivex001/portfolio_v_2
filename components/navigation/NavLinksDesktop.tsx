@@ -113,13 +113,13 @@ export const NavLinksDesktop = (props: Props) => {
   return (
     <a.nav
       id={"main-menu"}
-      className="absolute w-fit top-8 right-8 bg-secondary  ring-1  ring-primary rounded-[10px] font-medium px-6 py-[7px] gap-6 hidden md:flex items-center select-none"
+      className="absolute w-fit top-8 right-8 bg-white dark:bg-secondary  ring-1 dark:ring-0  dark:ring-primary ring-grey-ea rounded-[10px] font-medium px-6 py-[7px] gap-6 hidden md:flex items-center select-none"
       style={activeNavSpring}
       aria-label={"Main Menu"}
     >
       {userScrolling}
       <ul
-        className="flex text-sm gap-8 leading-[1.5] text-white"
+        className="flex text-sm gap-8 leading-[1.5] text-primary dark:text-grey-6"
         role={"menubar"}
         onBlur={handleMenuBarBlur}
       >
@@ -128,7 +128,7 @@ export const NavLinksDesktop = (props: Props) => {
             key={anchor.name}
             id={anchor.name + "-menu-item"}
             className={`flex items-center gap-2 group/nav-item transition-colors ${
-              activeSection == anchor.name && "text-primary dark:text-grey-d"
+              activeSection == anchor.name && "dark:text-white text-black"
             }`}
             role={"menuitem"}
           >

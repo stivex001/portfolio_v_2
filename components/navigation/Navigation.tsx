@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLinksDesktop } from "./NavLinksDesktop";
 import NavLinksMobile from "./NavLinksMobile";
+import Image from "next/image";
+import logo from "@/components/images/bai_lofo.png";
 
 type Props = {};
 
@@ -10,15 +12,16 @@ export const Navigation = (props: Props) => {
       <div id="home" className="w-full max-w-[1504px] mx-auto relative">
         <div className="p-6 md:p-8">
           <a
-            className="flex items-center logo w-fit h-12"
+            className="flex items-center logo w-[70px] h-[70px]"
             href={"/"}
             aria-label={"Stephen Adeyemo' Portfolio Logo"}
             title={"Stephen Adeyemo' Portfolio"}
           >
-            <span className="text-white mr-1">bai</span>
-            <span className="text-white w-12 h-8 rounded bg-secondary flex items-center justify-center">
-              .io
-            </span>
+            <Image
+              src={logo}
+              alt="logo"
+              className="inline-block w-full h-full"
+            />
           </a>
         </div>
       </div>
