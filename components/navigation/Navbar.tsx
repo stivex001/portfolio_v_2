@@ -98,7 +98,7 @@ export const Navbar = (props: Props) => {
         href={"/"}
         className="z-50 text-base bg-primary rounded-md p-1 font-semibold flex items-center justify-center"
       >
-        <span className="text-white mr-1">bai</span>
+        <span className="text-white mr-1">baiss</span>
         <span className="text-white w-12 h-8 rounded bg-secondary flex items-center justify-center">
           .io
         </span>
