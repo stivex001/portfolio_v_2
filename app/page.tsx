@@ -8,6 +8,7 @@ import FeaturedProjects from "@/components/featured-projects/FeaturedProjects";
 import Projects from "@/components/project/Projects";
 import Recommendations from "@/components/recommendation/Recommendations";
 import Contact from "@/components/contact/Contact";
+import Footer from "@/components/footer/Footer";
 
 const Page = () => {
   return (
@@ -22,6 +23,7 @@ const Page = () => {
       <Projects />
       <Recommendations />
       <Contact />
+      <Footer />
     </>
   );
 };
