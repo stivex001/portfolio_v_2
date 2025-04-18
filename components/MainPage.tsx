@@ -10,7 +10,9 @@ import Link from "./clickable/Link";
 import HomeBackground from "./home/HomeBackground";
 import Section from "./sections/Section";
 
-const MainPage = () => {
+// https://docs.google.com/document/d/1KmDmoQSnCukowpBrT2yk6yH46ZffMBUR/edit?usp=drive_link&ouid=106038115159105811884&rtpof=true&sd=true
+
+const MainPage = () => {  
   const exportFormat = "pdf";
   const resumeDownloadLink = `https://docs.google.com/document/d/${process.env.NEXT_PUBLIC_RESUME_GOOGLE_DOC_ID}/export?format=${exportFormat}`;
   const {
