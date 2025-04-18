@@ -30,6 +30,30 @@ export interface Project {
 
 const projectData: Array<Project> = [
   {
+    name: "Refuel Plus",
+    logo: "/assets/projects/refuel_icon.png",
+    image: {
+      desktop: "/assets/projects/refuel_web.png",
+      mobile: "/assets/projects/refuel_mobile.png",
+    },
+    timeRange: [new Date(2024, 8), new Date(2024, 11)],
+    description:
+      "We Provide innovative solutions in mobile detailing and car rescue",
+    tags: [
+      "Nextjs",
+      "Zustand",
+      "Tanstack Query",
+      "Taiwind CSS",
+      "React Hook Form",
+      "Zod",
+    ],
+    link: {
+      github: "https://github.com/stivex001",
+      live: "https://www.refuel-plus.com",
+    },
+    themeColor: "[--rotating-gradient-border-color:#0079C9]",
+  },
+  {
     name: "PlanetF",
     logo: "/assets/projects/planetf-.png",
     image: {
