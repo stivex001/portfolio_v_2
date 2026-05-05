@@ -9,12 +9,12 @@ import DownloadIcon from "./svg/icons/DownloadIcon";
 import Link from "./clickable/Link";
 import HomeBackground from "./home/HomeBackground";
 import Section from "./sections/Section";
+import { RESUME_DOWNLOAD_URL } from "@/lib/constants";
 
-// https://docs.google.com/document/d/1KmDmoQSnCukowpBrT2yk6yH46ZffMBUR/edit?usp=drive_link&ouid=106038115159105811884&rtpof=true&sd=true
+const STACK = ["React", "Next.js", "React Native", "TypeScript"];
 
-const MainPage = () => {  
-  const exportFormat = "pdf";
-  const resumeDownloadLink = `https://docs.google.com/document/d/${process.env.NEXT_PUBLIC_RESUME_GOOGLE_DOC_ID}/export?format=${exportFormat}`;
+const MainPage = () => {
+
   const {
     observedRef,
     springAnimate: [
@@ -42,7 +42,7 @@ const MainPage = () => {
     ]
   );
 
-  const layoutReveal = (index: number) => ({
+  const reveal = (index: number) => ({
     transform: to(layoutTransformTrail[index].y, (y) => `translateY(${y}px)`),
     opacity: to(layoutOpacityTrail[index].opacity, (op: number) => `${op}`),
   });
@@ -51,69 +51,112 @@ const MainPage = () => {
     <Section
       name="home"
       id="content"
-      padding="py-[192px] md:py-[192px]"
+      padding="py-[140px] md:py-[180px]"
       sectionRef={observedRef}
     >
-      <header className="self-center text-center">
-        <a.h1
-          className="text-grey-1 dark:text-grey-d text-[60px] md:text-[72px] xl:text-[100px] leading-[1] font-extrabold mx-6"
-          style={layoutReveal(1)}
-        >
-          <div className="inline-block relative w-0">
-            <a.div
-              className={`
-                select-none font-extrabold font-mono
-                text-grey-2 dark:text-grey-b
-                text-[20px] md:text-[24px] 
-                absolute -top-[8px] -left-[40px]
-              `}
-              style={layoutReveal(0)}
-              aria-label={"I AM"}
-            >
-              I
-              <span className="text-blue-200 dark:text-blue-d-200">&apos;</span>
-              m
-            </a.div>
-            <span className="invisible">I`&apos;m</span>
-          </div>
-          <span className="font-visby">STEPHEN ADEYEMO</span>
-        </a.h1>
-        <a.h2
-          className="uppercase dark:text-grey-6 font-[500] text-[15px] xl:text-base tracking-wide text-center font-lato"
-          style={layoutReveal(2)}
-        >
-          I thrive in the digital realm.
-        </a.h2>
-      </header>
-      <a.p
-        className="py-9 max-w-[512px] md:max-w-[650px] xl:text-[18px] text-center self-center"
-        style={layoutReveal(3)}
-      >
-        I specialize in building products, features, and websites. Explore my
-        portfolio to see examples of my work and experience. If you`&apos;re
-        interested, I`&apos;m available for hire.
-      </a.p>
+      {/* ── Availability badge ── */}
       <a.div
-        className="flex flex-wrap gap-6 call-to-action-buttons self-center"
-        style={layoutReveal(4)}
+        style={reveal(0)}
+        className="self-center flex items-center gap-2.5 mb-10 md:mb-12"
+        aria-label="Availability status: open to new projects"
+      >
+        <span className="relative flex h-2 w-2" aria-hidden="true">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+        </span>
+        <span className="font-mono text-[11px] md:text-[12px] tracking-[0.18em] uppercase text-grey-3 dark:text-grey-b select-none">
+          Open to new projects · Abuja, Nigeria
+        </span>
+      </a.div>
+
+      {/* ── Name ── */}
+      <a.header
+        style={reveal(1)}
+        className="self-center text-center mb-5 md:mb-6"
+      >
+        <h1 className="font-visby font-extrabold leading-[0.88] tracking-tight text-grey-1 dark:text-grey-d
+          text-[clamp(56px,14vw,148px)]">
+          STEPHEN<br />
+          <span className="relative">
+            ADEYEMO
+            <span
+              className="text-blue-200 dark:text-blue-d-200 select-none"
+              aria-hidden="true"
+            >
+              .
+            </span>
+          </span>
+        </h1>
+      </a.header>
+
+      {/* ── Role + stack pills ── */}
+      <a.div
+        style={reveal(2)}
+        className="self-center flex flex-col items-center gap-3 mb-8 md:mb-10"
+      >
+        <p className="font-mono text-[11px] md:text-[12px] tracking-[0.22em] uppercase text-grey-3 dark:text-grey-b">
+          Product Engineer · Web &amp; Mobile
+        </p>
+        <div
+          className="flex flex-wrap justify-center gap-2"
+          aria-label="Core technologies"
+        >
+          {STACK.map((tech) => (
+            <span
+              key={tech}
+              className="font-mono text-[10px] md:text-[11px] px-2.5 py-1 rounded-full
+                border border-grey-ea dark:border-grey-4
+                text-grey-3 dark:text-grey-9
+                select-none"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </a.div>
+
+      {/* ── Bio ── */}
+      <a.p
+        style={reveal(3)}
+        className="self-center text-center max-w-[440px] md:max-w-[580px]
+          text-[16px] xl:text-[17px] leading-[1.75]
+          text-grey-3 dark:text-grey-b mb-10 md:mb-12"
+      >
+        I design and ship web and mobile products from the ground up — turning
+        complex requirements into interfaces that feel effortless. Every detail
+        is intentional, every interaction earns its place.
+      </a.p>
+
+      {/* ── CTAs ── */}
+      <a.div
+        style={reveal(4)}
+        className="self-center flex flex-wrap justify-center gap-4"
       >
         <Link href="#projects" internal variant="plain">
-          <Button variant="blue" className="bg-secondary" tabIndex={-1}>
-            Check out my work
+          <Button
+            variant="blue"
+            className="px-7 py-3 text-[14px] md:text-[15px] tracking-wide"
+            tabIndex={-1}
+          >
+            View My Work
           </Button>
         </Link>
         <Link
-          href={resumeDownloadLink}
+          href={RESUME_DOWNLOAD_URL}
           variant="plain"
           download
-          ariaLabel="download resume"
+          ariaLabel="Download CV as PDF"
         >
-          <Button variant="black">
-            <span>Resume</span>
+          <Button
+            variant="black"
+            className="px-7 py-3 text-[14px] md:text-[15px] tracking-wide"
+          >
+            <span>Download CV</span>
             <DownloadIcon />
           </Button>
         </Link>
       </a.div>
+
       <HomeBackground
         glowBackground={bgLineGlowTrail}
         revealBackground={bgLineRevealTrail}
