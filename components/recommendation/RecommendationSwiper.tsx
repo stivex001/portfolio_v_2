@@ -1,17 +1,18 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { RecommendationSwiperProps } from "./props";
 import { useInView } from "react-intersection-observer";
 import { a, useSpring, useSpringRef, useTransition } from "@react-spring/web";
-import { useSpring as useThreeSpring } from "@react-spring/three";
 import { percentToRadians } from "@/utils/convertion";
-import EarthThree from "../react-three/EarthThree";
+import dynamic from "next/dynamic";
 import LocationIcon from "../svg/abstract/LocationIcon";
 import CustomTooltip from "../clickable/CustomTooltip";
 import PrevIcon from "../svg/icons/PrevIcon";
 import NextIcon from "../svg/icons/NextIcon";
 import RecommendationCard from "./RecommendationCard";
+
+const EarthThree = dynamic(() => import("../react-three/EarthThree"), { ssr: false });
 
 type Props = {};
 
@@ -22,6 +23,7 @@ export const RecommendationSwiper = ({
 }: RecommendationSwiperProps) => {
   const [earthRotating, setEarthRotating] = useState<boolean>(true);
   const [earthLoaded, setEarthLoaded] = useState<boolean>(false);
+  const [targetRotation, setTargetRotation] = useState<number[]>([0, 0, 0]);
 
   const [viewed, setViewed] = useState<boolean>(false);
 
@@ -44,10 +46,6 @@ export const RecommendationSwiper = ({
     exitBeforeEnter: true,
   });
 
-  const [earthRotationSpring, earthRotationSpringRef] = useThreeSpring(() => ({
-    rotation: [0, 0, 0],
-  }));
-
   useEffect(() => {
     if (inView && !viewed) {
       setViewed(true);
@@ -57,27 +55,24 @@ export const RecommendationSwiper = ({
   useEffect(() => {
     if (inView) {
       cardTransitionRef.start();
-      earthRotationSpringRef.start({
-        rotation: recommendations[recommendationIndex].coordinates.map(
-          (coord) => percentToRadians(coord)
-        ),
-        onStart: () => setEarthRotating(true),
-        onRest: () => setEarthRotating(false),
-        config: { tension: 350, friction: 75 },
-      });
-      earthViewedSpringRef.start({
-        opacity: 1,
-      });
+      setTargetRotation(
+        recommendations[recommendationIndex].coordinates.map((coord) =>
+          percentToRadians(coord)
+        )
+      );
+      earthViewedSpringRef.start({ opacity: 1 });
     }
   }, [
     viewed,
     recommendationIndex,
     cardTransitionRef,
-    earthRotationSpringRef,
     earthViewedSpringRef,
     inView,
     recommendations,
   ]);
+
+  const handleRotationStart = useCallback(() => setEarthRotating(true), []);
+  const handleRotationEnd = useCallback(() => setEarthRotating(false), []);
 
   const nextRecommendation = () => {
     if (recommendationIndex < recommendations.length) {
@@ -103,7 +98,9 @@ export const RecommendationSwiper = ({
         style={earthViewedSpring}
       >
         <EarthThree
-          rotationSpring={earthRotationSpring}
+          targetRotation={targetRotation}
+          onRotationStart={handleRotationStart}
+          onRotationEnd={handleRotationEnd}
           setLoaded={setEarthLoaded}
         />
         {earthLoaded ? (
@@ -160,13 +157,13 @@ export const RecommendationSwiper = ({
         ))}
         <button
           className={`
-            z-10 group/icon 
+            z-10 group/icon
             w-[48px] aspect-square rounded-[50%] grid place-items-center
             absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[12px] md:-translate-x-[36px] lg:-translate-x-[60px] backdrop-blur-sm
 
             ring-1 ring-grey-b dark:ring-grey-4
             bg-grey-d/50 dark:bg-grey-3/50
-            
+
             hover:ring-grey-9 dark:hover:ring-grey-5
             hover:bg-grey-d/75 dark:hover:bg-grey-5/50
 
@@ -185,13 +182,13 @@ export const RecommendationSwiper = ({
         </button>
         <button
           className={`
-            z-10 group/icon 
-            w-[48px] aspect-square rounded-[50%] grid place-items-center 
+            z-10 group/icon
+            w-[48px] aspect-square rounded-[50%] grid place-items-center
             absolute top-1/2 right-0 -translate-y-1/2 translate-x-[12px] md:translate-x-[36px] lg:translate-x-[60px] backdrop-blur-[2px]
 
             ring-1 ring-grey-b dark:ring-grey-4
             bg-grey-d/50 dark:bg-grey-3/50
-            
+
             hover:ring-grey-9 dark:hover:ring-grey-5
             hover:bg-grey-d/75 dark:hover:bg-grey-5/50
 

@@ -5,7 +5,11 @@ import Section from "../sections/Section";
 import SectionHeader from "../sections/SectionHeader";
 import SectionDescription from "../sections/SectionDescription";
 import recommendationData from "./recommendation";
-import { RecommendationSwiper } from "./RecommendationSwiper";
+import dynamic from "next/dynamic";
+const RecommendationSwiper = dynamic(
+  () => import("./RecommendationSwiper").then((mod) => mod.RecommendationSwiper),
+  { ssr: false }
+);
 import { RecommendationControl } from "./RecommendationControl";
 
 type Props = {};
