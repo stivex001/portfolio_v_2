@@ -1,17 +1,15 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 
-import React, { useEffect, useRef, useState, useMemo } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ProjectGridProps } from "./props";
 import { useInView } from "react-intersection-observer";
 import { a, useSpring, useSpringRef, useTransition } from "@react-spring/web";
 import { ProjectCard } from "./ProjectCard";
 import Button from "../clickable/Button";
 
-type Props = {};
-
 export const ProjectGrid = ({ projects }: ProjectGridProps) => {
-  const INITIAL_CARD_COUNT = 3;
+  const INITIAL_CARD_COUNT = 4;
   const projectCardHeaderRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const [projectCount, setProjectCount] = useState(INITIAL_CARD_COUNT);
@@ -24,10 +22,12 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   const cardRevealTransRef = useSpringRef();
   const cardRevealTransition = useTransition(projects.slice(0, projectCount), {
     ref: cardRevealTransRef,
-    from: { opacity: 0, y: -16, config: { tension: 400 } },
-    enter: { opacity: 1, y: 0 },
+    from: { opacity: 0, y: 12 },
+    enter: { opacity: 1, y: 0, config: { tension: 380, friction: 38 } },
     leave: { opacity: 1, config: { duration: 0 } },
+    trail: 60,
   });
+
   const [buttonRevealSpring, buttonRevealSpringRef] = useSpring(() => ({
     opacity: 0,
   }));
@@ -37,17 +37,13 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   }, [projects]);
 
   useEffect(() => {
-    if (inView && !viewed) {
-      setViewed(true);
-    }
+    if (inView && !viewed) setViewed(true);
   }, [inView, viewed]);
 
   useEffect(() => {
     if (inView) {
-      // card reveal animation
       cardRevealTransRef.start();
-      // button reveal animation
-      buttonRevealSpringRef.start({ opacity: 1, delay: 250 });
+      buttonRevealSpringRef.start({ opacity: 1, delay: 300 });
     }
     if (
       projectCount === projects.length &&
@@ -74,34 +70,34 @@ export const ProjectGrid = ({ projects }: ProjectGridProps) => {
   return (
     <>
       <div
-        className="grid gap-6 my-8 md:gap-8 project-grid grid-rows-auto md:grid-cols-2 semi-lg:grid-cols-3 place-content-center"
+        className="my-8 border-t border-grey-ea dark:border-grey-2"
         ref={ref}
       >
         {cardRevealTransition((style, project, _transition, index) => (
-          <a.div
-            className="project-card-container"
-            style={style}
-            key={project.name}
-          >
+          <a.div style={style} key={project.name}>
             <ProjectCard
               project={project}
               headerRef={(el: any) =>
                 (projectCardHeaderRefs.current[index] = el)
               }
+              index={index}
             />
           </a.div>
         ))}
       </div>
-      {projectCount > INITIAL_CARD_COUNT && (
+      {projects.length > INITIAL_CARD_COUNT && (
         <a.div
-          className="flex justify-center grid-control"
+          className="flex justify-center mt-2"
           style={buttonRevealSpring}
         >
           <Button
             variant="blue"
             onClick={handleProjectCountToggle}
-            ariaLabel="show additional projects"
-            tabIndex={projectCount === INITIAL_CARD_COUNT ? 0 : -1}
+            ariaLabel={
+              projectCount === INITIAL_CARD_COUNT
+                ? "show additional projects"
+                : "show fewer projects"
+            }
           >
             {projectCount === INITIAL_CARD_COUNT ? "Show more" : "Show less"}
           </Button>

@@ -1,7 +1,5 @@
 import { Project } from "../data/project";
 
-// RefObject<HTMLAnchorElement>
-
 export type ProjectGridProps = {
   projects: Array<Project>;
 };
@@ -9,6 +7,7 @@ export type ProjectGridProps = {
 export type ProjectCardProps = {
   project: Project;
   headerRef: any;
+  index: number;
 };
 
 export type ProjectCardLinksProps = {

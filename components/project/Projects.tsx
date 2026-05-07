@@ -21,8 +21,7 @@ const Projects = (props: Props) => {
     >
       <SectionHeader>More projects</SectionHeader>
       <SectionDescription>
-        Discover a collection of projects showcasing my skills, creativity, and
-        technical expertise.
+        Side projects, client work, and experiments — built to solve real problems.
       </SectionDescription>
       <ProjectGrid projects={projects} />
     </Section>
