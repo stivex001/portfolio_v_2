@@ -14,7 +14,7 @@ type Props = {};
 
 const FeaturedProjects = (props: Props) => {
   const { current: projects } = useRef(
-    projectData.slice(0, 3) as Required<Project>[]
+    projectData.slice(0, 6) as Required<Project>[]
   );
   const [projectIndex, setProjectIndex] = useState<number>(0);
   const [projectViewMode, setProjectViewMode] =

@@ -9,7 +9,7 @@ import DesktopIcon from "@/components/svg/icons/DesktopIcon";
 import MobileIcon from "@/components/svg/icons/MobileIcon";
 import Button from "@/components/clickable/Button";
 import LiveIcon from "@/components/svg/icons/LiveIcon";
-import GithubIcon from "@/components/svg/icons/GithubIcon";
+import Image from "next/image";
 export default function FeaturedProjectCard({
   project,
   active,
@@ -50,7 +50,9 @@ export default function FeaturedProjectCard({
         `}
       >
         <header className={"grid gap-1"}>
-          <div className="mb-6 logo">{project.logo}</div>
+          <div className="mb-6 logo">
+            <Image src={project.logo} alt={project.name} width={40} height={40} className="rounded-md" />
+          </div>
           <h3 className="font-visby font-extrabold text-[20px] text-grey-1 dark:text-grey-d group/header">
             <Link
               href={project.link.live}
@@ -134,12 +136,6 @@ export default function FeaturedProjectCard({
             <Button variant="blue" tabIndex={-1}>
               <span>Live Website</span>
               <LiveIcon />
-            </Button>
-          </Link>
-          <Link href={project.link.github} tabIndex={active ? 0 : -1} variant="plain">
-            <Button variant="black" tabIndex={-1}>
-              <span>View on Github</span>
-              <GithubIcon />
             </Button>
           </Link>
         </div>

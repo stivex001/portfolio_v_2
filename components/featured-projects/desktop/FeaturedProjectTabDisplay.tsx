@@ -50,6 +50,7 @@ export default function FeaturedProjectTabDisplay({
         ring-1 ring-grey-ea dark:ring-grey-2
         rounded-ee-[10px] lg:rounded-e-[10px]
         overflow-hidden isolate group/display
+        py-14
       `}
       ref={observedRef}
     >
@@ -64,7 +65,7 @@ export default function FeaturedProjectTabDisplay({
             style={style}
           >
             <a.div
-              className="frame mt-auto mb-[32px] lg:mb-[64px] relative"
+              className="frame my-auto relative"
               style={displayFrameTrail[0]}
             >
               <button
@@ -107,7 +108,7 @@ export default function FeaturedProjectTabDisplay({
             style={style}
           >
             <a.div
-              className="frame mt-auto mb-[54px] lg:mb-[96px] relative"
+              className="frame my-auto relative"
               style={displayFrameTrail[1]}
             >
               <button

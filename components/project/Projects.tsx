@@ -11,7 +11,7 @@ type Props = {};
 
 const Projects = (props: Props) => {
 
-    const { current: projects } = useRef(projectData.slice(3));
+    const { current: projects } = useRef(projectData.slice(6));
 
   return (
     <Section

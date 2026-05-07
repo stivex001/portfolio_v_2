@@ -4,7 +4,6 @@ import { a } from "@react-spring/web";
 import { useSpring } from "@react-spring/web";
 import { FeaturedProjectTabListProps } from "../props";
 import { useRef } from "react";
-import FeaturedProjectTag from "../FeaturedProjectTag";
 import Image from "next/image";
 
 export default function FeaturedProjectTabList({
@@ -48,27 +47,19 @@ export default function FeaturedProjectTabList({
         className={`
         absolute
         left-3 top-0 -translate-y-1/2
-        w-[calc(100%-24px)] h-[calc(33%-24px)]
+        w-[calc(100%-24px)]
         rounded-[5px] -z-10
         hidden lg:block
         ${rotatingGradientBorderStyles}
       `}
-        style={{ top: projectMarkerSpring.pos.to((pos) => `${pos}%`) }}
-      />
-      <a.span
-        className={`
-        absolute
-        top-3 left-0 -translate-x-1/2
-        h-[calc(100%-24px)] w-[calc(33%-24px)]
-        rounded-[5px] -z-10
-        hidden md:block lg:hidden
-        ${rotatingGradientBorderStyles}
-      `}
-        style={{ left: projectMarkerSpring.pos.to((pos) => `${pos}%`) }}
+        style={{
+          top: projectMarkerSpring.pos.to((pos) => `${pos}%`),
+          height: `calc(${PROJECT_HEIGHT}% - 24px)`,
+        }}
       />
       {projects.map((project, index) => (
         <button
-          className="project-item ring-1 ring-grey-ea dark:ring-grey-2 hover:ring-grey-b dark:hover:ring-grey-4 p-6 flex flex-col items-start gap-2 cursor-pointer first-of-type:rounded-ss-[10px] last-of-type:rounded-se-[10px] lg:last-of-type:rounded-es-[10px] lg:last-of-type:rounded-se-none transition-shadow"
+          className="project-item ring-1 ring-grey-ea dark:ring-grey-2 hover:ring-grey-b dark:hover:ring-grey-4 px-4 py-3 flex flex-col items-start gap-1 cursor-pointer first-of-type:rounded-ss-[10px] last-of-type:rounded-se-[10px] lg:last-of-type:rounded-es-[10px] lg:last-of-type:rounded-se-none transition-shadow"
           role="tab"
           ref={projectTabTriggerRefs[index]}
           id={`featured-project-${index + 1}-trigger`}
@@ -80,23 +71,18 @@ export default function FeaturedProjectTabList({
           aria-selected={index === projectIndex}
           onClick={() => setProjectIndex(index)}
         >
-          <div className="mb-2 logo">
+          <div className="mb-1 logo">
             <Image
               src={project.logo}
               alt={project.name}
-              width={40}
-              height={40}
-            
+              width={32}
+              height={32}
+              className="rounded-md"
             />
           </div>
-          <h3 className="font-visby font-extrabold text-[18px] text-grey-1 dark:text-grey-d">
+          <h3 className="font-visby font-extrabold text-[15px] leading-[1.2] text-grey-1 dark:text-grey-d">
             {project.name}
           </h3>
-          <div className="flex flex-wrap gap-2 tags">
-            {project.tags.map((tag) => (
-              <FeaturedProjectTag name={tag} key={tag} />
-            ))}
-          </div>
         </button>
       ))}
     </div>

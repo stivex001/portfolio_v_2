@@ -1,8 +1,3 @@
-// import PlanetfLogo from "../../components/svg/projects/planetf-.png";
-// import LavishCuisineLogo from "../components/svg/projects/LavishCuisineLogo";
-
-import AmazonCloneLogo from "../svg/projects/AmazonCloneLogo";
-
 type ProjectTag =
   | "react"
   | "next-js"
@@ -29,6 +24,40 @@ export interface Project {
 }
 
 const projectData: Array<Project> = [
+  {
+    name: "Neegma",
+    logo: "/assets/projects/neegma_logo.webp",
+    image: {
+      desktop: "/assets/projects/neegma_desktop.png",
+      mobile: "/assets/projects/neegma_mobile.png",
+    },
+    timeRange: [new Date(2024, 0), new Date(2025, 0)],
+    description:
+      "A social gaming platform that turns any room into a live game show. Host multiplayer games for up to 500 players who join instantly via link or QR code — no downloads or sign-ups needed. Features real-time scoreboards, team modes, and post-show analytics.",
+    tags: ["Next.js", "TypeScript", "React", "Node.js"],
+    link: {
+      github: "",
+      live: "https://www.tryneegma.com/",
+    },
+    themeColor: "[--rotating-gradient-border-color:#8B5CF6]",
+  },
+  {
+    name: "ArtisansHub",
+    logo: "/assets/projects/artisanhub_logo.webp",
+    image: {
+      desktop: "/assets/projects/artisanhub_desktop.png",
+      mobile: "/assets/projects/artisanhub_mobile.png",
+    },
+    timeRange: [new Date(2023, 6), new Date(2024, 6)],
+    description:
+      "A marketplace connecting skilled artisans with clients. Craftspeople showcase their work and receive job inquiries, while clients find vetted service providers — covering creative, digital, and professional trades.",
+    tags: ["Next.js", "TypeScript", "React", "Node.js"],
+    link: {
+      github: "",
+      live: "https://www.artisanshub.org/",
+    },
+    themeColor: "[--rotating-gradient-border-color:#F59E0B]",
+  },
   {
     name: "Refuel Plus",
     logo: "/assets/projects/refuel_icon.png",

@@ -6,7 +6,6 @@ import NorthWestIcon from "@/components/svg/abstract/NorthWestIcon";
 import { formatDateTimeAttribute, formatMonthYear } from "@/utils/moment";
 import Button from "@/components/clickable/Button";
 import LiveIcon from "@/components/svg/icons/LiveIcon";
-import GithubIcon from "@/components/svg/icons/GithubIcon";
 
 
 
@@ -53,12 +52,6 @@ export default function FeaturedProjectTabPanel({
           <Button variant="blue" tabIndex={-1}>
             <span>Live Website</span>
             <LiveIcon />
-          </Button>
-        </Link>
-        <Link href={project.link.github} variant="plain">
-          <Button variant="black" tabIndex={-1}>
-            <span>View on Github</span>
-            <GithubIcon />
           </Button>
         </Link>
       </div>
