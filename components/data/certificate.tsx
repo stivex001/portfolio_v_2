@@ -66,8 +66,8 @@ const certificate: Certificate[] = [
 
 const certificateData: CertificateData = {
   certificate,
-  startTime: new Date(2021, 0),
-  endTime: new Date(2024, 0),
+  startTime: new Date(2019, 0), // aligned with experienceData so year labels share the same coordinate space
+  endTime: new Date(2026, 5),
 };
 
 export function certificateTimelineCalculator(certificate: Certificate) {

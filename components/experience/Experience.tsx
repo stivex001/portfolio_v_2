@@ -7,16 +7,8 @@ import SectionHeader from "../sections/SectionHeader";
 import SectionDescription from "../sections/SectionDescription";
 import { ExperienceTimeline } from "./ExperienceTimeline";
 import { ExperienceCard } from "./ExperienceCard";
-import { ExperienceImage } from "./ExperienceImage";
-import experienceData, {
-  experienceTimelineCalculator,
-} from "../data/experience";
-import {
-  useSpring,
-  useSpringRef,
-  useTrail,
-  useTransition,
-} from "@react-spring/web";
+import experienceData, { experienceTimelineCalculator } from "../data/experience";
+import { useSpring, useTrail } from "@react-spring/web";
 import { ExperienceControl } from "./ExperienceControl";
 
 type Props = {};
@@ -42,9 +34,6 @@ export const Experience = (props: Props) => {
 
   useEffect(() => {
     if (inView) {
-      // image animations
-      imageTransRef.start();
-      // card animations
       CRApi.set({ y: 32, opacity: 0 });
       CRApi.start({
         y: 0,
@@ -52,7 +41,6 @@ export const Experience = (props: Props) => {
         delay: 500,
         config: { tension: 400, friction: 40 },
       });
-      // timeline animations
       YTSApi.update({ y: -YEAR_TIMELINE_POS });
       YTSApi.start();
       MTHApi.update({ height: MONTH_TIMELINE_HEIGHT });
@@ -62,57 +50,11 @@ export const Experience = (props: Props) => {
     }
   }, [viewed, expertiseIndex]);
 
-  // Image Animations
-  const imageTransRef = useSpringRef();
-  const imageTransition = useTransition(expertiseIndex, {
-    ref: imageTransRef,
-    keys: null,
-    from: { opacity: 0, rotateX: 0, rotateY: 0, rotateZ: 0, y: "-40%" },
-    enter: {
-      opacity: 1,
-      rotateX: 4,
-      rotateY: -24,
-      rotateZ: 5,
-      y: "-50%",
-      delay: 500,
-    },
-    leave: {
-      opacity: 0,
-      rotateX: 0,
-      rotateY: -48,
-      rotateZ: 5,
-      y: "-50%",
-      config: { tension: 350 },
-    },
-  });
+  const [contentReveal, CRApi] = useTrail(4, { from: { y: 32, opacity: 0 } }, []);
 
-  // Card Animations
-  const [contentReveal, CRApi] = useTrail(
-    4,
-    {
-      from: { y: 32, opacity: 0 },
-    },
-    []
-  );
-
-  // Timeline Animations
-  const [yearTimeLineScroll, YTSApi] = useSpring(
-    () => ({
-      from: { y: -275 },
-    }),
-    []
-  );
-
-  const [monthTimeLineHeight, MTHApi] = useSpring(
-    () => ({
-      from: { height: 0 },
-    }),
-    []
-  );
-
-  const [monthTimeLineMarker, MTMApi] = useSpring(() => ({
-    opacity: 0,
-  }));
+  const [yearTimeLineScroll, YTSApi] = useSpring(() => ({ from: { y: -340 } }), []);
+  const [monthTimeLineHeight, MTHApi] = useSpring(() => ({ from: { height: 0 } }), []);
+  const [monthTimeLineMarker, MTMApi] = useSpring(() => ({ opacity: 0 }));
 
   return (
     <Section
@@ -121,20 +63,16 @@ export const Experience = (props: Props) => {
       sectionRef={ref}
       padding="pt-12 pb-16 md:pt-8 md:pb-[224px]"
     >
-      <SectionHeader mode="standalone">
-        My <span className="text-blue-100 dark:blue-d-200">Experience</span> as
-        a Software Engineer
-      </SectionHeader>
+      <SectionHeader>Experience</SectionHeader>
       <SectionDescription>
-        A display of my growth as a Software Engineer, showcasing the progress
-        I have achieved and the valuable experience I`&apos;ve acquired
+        Five years across contract, lead, and senior roles — shipping products
+        that real people use, in fast-moving remote teams.
       </SectionDescription>
       <div aria-label="experience carousel">
         <div
           className="relative flex experience-content"
           id={`experience-item-${expertiseIndex + 1}`}
           role="tabpanel"
-          style={{ perspective: "800px" }}
         >
           <ExperienceTimeline
             expertise={expertise}
@@ -143,10 +81,6 @@ export const Experience = (props: Props) => {
             monthTimeLineMarker={monthTimeLineMarker}
           />
           <ExperienceCard expertise={expertise} contentReveal={contentReveal} />
-          <ExperienceImage
-            imageTransition={imageTransition}
-            data={experienceData.expertise}
-          />
         </div>
       </div>
       <ExperienceControl

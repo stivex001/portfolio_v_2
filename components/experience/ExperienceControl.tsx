@@ -50,7 +50,7 @@ export const ExperienceControl = ({
                   className={`w-[12px] aspect-square rounded-[50%] ring-grey-b dark:ring-grey-5 ${
                     isActiveButton
                       ? "bg-blue-100 dark:bg-blue-d-200"
-                      : "bg-grey-d dark:bg-secondary hover:ring-1"
+                      : "bg-grey-9 dark:bg-grey-4 hover:ring-1"
                   }`}
                   onClick={() => setExpertiseIndex(index)}
                 />

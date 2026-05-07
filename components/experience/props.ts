@@ -22,5 +22,5 @@ export interface ExperienceControlProps {
   expertiseIndex: number;
   setExpertiseIndex: Function;
   expertiseCount: number;
-  expertiseData: Expertise[];
+  expertiseData: { title: string }[];
 }

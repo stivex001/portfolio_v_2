@@ -1,13 +1,12 @@
 import { getMonthDifference } from "@/utils/moment";
 
 export interface Expertise {
-  logo: string;
   title: string;
   subTitle: string;
   details: string;
   timeRange: [Date, Date];
-  certificate: string;
-  showcaseImage: string;
+  certificate?: string;
+  linkText?: string;
 }
 
 interface ExperienceData {
@@ -18,55 +17,39 @@ interface ExperienceData {
 
 const expertise: Expertise[] = [
   {
-    logo: "/assets/experience/alx.jpeg",
-    showcaseImage: "/assets/experience/alx_certificate.png",
-    title: "Emplug",
-    subTitle: "Frontend Engineer",
+    title: "5Star-INN-Company",
+    subTitle: "Frontend Engineer (Contract)",
     details:
-      "Developed skills in remote pair programming using GitHub, industry-standard git-flow, and daily standups. Mastered algorithms, data structures, and full-stack development.",
-    timeRange: [new Date(2023, 7), new Date()],
-    certificate:
-      "https://drive.google.com/file/d/1JnYqEnYiRlML8DVMdu_04tf72FKET_1J/view?usp=sharing",
+      "Led UI/UX rebranding and built real-time market data dashboards. Delivered referral systems, leaderboards, and PDF/Excel export features. Improved API response efficiency and independently led the frontend team, ensuring on-time delivery of key projects.",
+    timeRange: [new Date(2023, 1), new Date(2026, 4)], // Feb 2023 – Present
   },
   {
-    logo: "/assets/experience/minnesota.webp",
-    showcaseImage: "/assets/experience/minnesota-showcase.webp",
-    title: "University of Minnesota",
-    subTitle: "Software Development Methodologies",
+    title: "Emplug Limited",
+    subTitle: "Lead Frontend Engineer",
     details:
-      "An online non-credit course authorized by the University of Minnesota and offered through Coursera, on Important Processes and Methodologies in Software Development.",
-    timeRange: [new Date(2022, 3), new Date(2022, 6)],
-    certificate:
-      "https://drive.google.com/file/d/1mKBTBjbhJmdGc4j5JHFKhmthl9c6_8pQ/view?usp=sharing",
+      "Led end-to-end frontend development, building 90%+ of product UIs across web and mobile. Drove architectural decisions, optimized performance by 40% through lazy loading and modular architecture, and mentored 5+ intern developers — improving code quality scores by 30%.",
+    timeRange: [new Date(2023, 6), new Date(2025, 7)], // Jul 2023 – Aug 2025
   },
   {
-    logo: "/assets/experience/linkedin-learning.webp",
-    showcaseImage: "/assets/experience/linkedin-learning-showcase.webp",
-    title: "Linkedin Learning",
-    subTitle: "Become a Software Developer",
+    title: "MensayHub Ltd",
+    subTitle: "Senior Frontend Engineer",
     details:
-      "A course that provides a broad perspective on core technologies for web development, software development, and databases. It introduced a bigger picture of how development careers work.",
-    timeRange: [new Date(2022, 6), new Date(2022, 7)],
-    certificate:
-      "https://drive.google.com/file/d/1_TH9jAT91AS_A-2Unh74u9BlqPWzd3f-/view?usp=sharing",
+      "Led frontend for ArtisansHub, a two-sided marketplace connecting users with verified skilled artisans. Built discovery flows, booking UIs, and admin dashboards. Optimized performance through code-splitting and memoization in a fully remote environment.",
+    timeRange: [new Date(2021, 1), new Date(2023, 6)], // Feb 2021 – Jul 2023
   },
   {
-    logo: "/assets/experience/gds.webp",
-    showcaseImage: "/assets/experience/gds-showcase.webp",
-    title: "Google Digital Skills for Africa",
-    subTitle: "Fundamentals of Digital Marketing",
+    title: "Platon",
+    subTitle: "Junior Frontend Developer",
     details:
-      "I mastered the basics of digital marketing. An Interactive Advertising Bureau-accredited course, created by Google trainers. Packed full of exercises and real-world examples to turn knowledge into action.",
-    timeRange: [new Date(2022, 5), new Date(2022, 7)],
-    certificate:
-      "https://drive.google.com/file/d/1T6XkLXWlfkPqLkghNSmHvGYjakWjNA1i/view?usp=sharing",
+      "Converted Figma designs into responsive, accessible UIs and integrated REST APIs. Built reusable components and improved app performance, achieving 90+ Lighthouse scores across cross-browser environments.",
+    timeRange: [new Date(2019, 6), new Date(2020, 0)], // Jul 2019 – Jan 2020
   },
 ];
 
 const experienceData: ExperienceData = {
   expertise,
-  startTime: new Date(2021, 0),
-  endTime: new Date(2024, 0),
+  startTime: new Date(2019, 0), // Jan 2019
+  endTime: new Date(2026, 5),   // Jun 2026
 };
 
 export function experienceTimelineCalculator(expertise: Expertise) {

@@ -8,9 +8,6 @@ import SectionDescription from "../sections/SectionDescription";
 import { ExperienceTimeline } from "./ExperienceTimeline";
 import { ExperienceCard } from "./ExperienceCard";
 import { ExperienceImage } from "./ExperienceImage";
-import experienceData, {
-  experienceTimelineCalculator,
-} from "../data/experience";
 import {
   useSpring,
   useSpringRef,
@@ -101,7 +98,7 @@ export const Certification = (props: Props) => {
   // Timeline Animations
   const [yearTimeLineScroll, YTSApi] = useSpring(
     () => ({
-      from: { y: -275 },
+      from: { y: -340 },
     }),
     []
   );
@@ -124,13 +121,10 @@ export const Certification = (props: Props) => {
       sectionRef={ref}
       padding="pt-12 pb-16 md:pt-8 md:pb-[224px]"
     >
-      <SectionHeader mode="standalone">
-        My <span className="text-blue-100 dark:blue-d-200">Certifications</span>
-      </SectionHeader>
+      <SectionHeader>Certifications</SectionHeader>
       <SectionDescription>
-        A curated showcase of my certifications, reflecting the skills and
-        expertise I&apos;ve gained through dedicated learning and professional
-        development in web and software technologies.
+        Courses and programmes I&apos;ve completed — each one pushing my understanding
+        of engineering, product thinking, and the craft of building software.
       </SectionDescription>
       <div aria-label="experience carousel">
         <div
@@ -153,10 +147,10 @@ export const Certification = (props: Props) => {
         </div>
       </div>
       <ExperienceControl
-        expertiseData={experienceData.expertise}
+        expertiseData={certificateData.certificate}
         expertiseIndex={expertiseIndex}
         setExpertiseIndex={setExpertiseIndex}
-        expertiseCount={experienceData.expertise.length}
+        expertiseCount={certificateData.certificate.length}
       />
     </Section>
   );

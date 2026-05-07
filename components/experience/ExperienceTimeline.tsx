@@ -14,7 +14,7 @@ export const ExperienceTimeline = ({
   const { YEAR_HEIGHT, YEAR_DIFFERENCE, FIRST_YEAR } =
     experienceTimelineCalculator(expertise);
   return (
-    <div className="relative h-[550px] w-[34px] md:w-[96px] flex overflow-hidden">
+    <div className="relative h-[680px] w-[34px] md:w-[96px] flex overflow-hidden">
       <a.div
         className="absolute w-[34px] top-1/2 h-full"
         style={yearTimeLineScroll}
@@ -25,7 +25,7 @@ export const ExperienceTimeline = ({
             <span
               key={currentYear}
               className={`
-                absolute -left-[8px] top-0 -translate-y-1/2 -rotate-[.25turn] text-sm text-grey-6 dark:text-grey-9 leading-[1] select-none font-visby font-extrabold
+                absolute -left-[8px] top-0 -translate-y-1/2 -rotate-[.25turn] text-sm text-grey-4 dark:text-grey-b leading-[1] select-none font-visby font-extrabold
               `}
               style={{ top: currentYear * YEAR_HEIGHT }}
             >
@@ -45,13 +45,13 @@ export const ExperienceTimeline = ({
           >
             <div className="relative h-full text-[14px] text-grey-9">
               <a.span
-                className="text-grey-6 dark:text-grey-9 absolute top-0 -translate-y-1/2 left-[calc(100%+16px)] hidden md:inline"
+                className="text-grey-4 dark:text-grey-b absolute top-0 -translate-y-1/2 left-[calc(100%+16px)] hidden md:inline"
                 style={monthTimeLineMarker}
               >
                 {moment(expertise.timeRange[0]).format("MMM")}
               </a.span>
               <a.span
-                className="text-grey-6 dark:text-grey-9 absolute bottom-0 translate-y-1/2 left-[calc(100%+16px)] hidden md:inline"
+                className="text-grey-4 dark:text-grey-b absolute bottom-0 translate-y-1/2 left-[calc(100%+16px)] hidden md:inline"
                 style={monthTimeLineMarker}
               >
                 {moment(expertise.timeRange[1]).format("MMM")}
@@ -62,8 +62,8 @@ export const ExperienceTimeline = ({
           </a.div>
         </div>
       </div>
-      <div className="fade-up absolute -left-[8px] w-[calc(100%+16px)] h-5 top-0 bg-gradient-to-b from from-white dark:from-blue-d-200" />
-      <div className="fade-down absolute -left-[8px] w-[calc(100%+16px)] h-5 bottom-0 bg-gradient-to-t from-white dark:from-blue-d-200" />
+      <div className="fade-up absolute -left-[8px] w-[calc(100%+16px)] h-5 top-0 bg-gradient-to-b from from-white dark:from-primary" />
+      <div className="fade-down absolute -left-[8px] w-[calc(100%+16px)] h-5 bottom-0 bg-gradient-to-t from-white dark:from-primary" />
     </div>
   );
 };
