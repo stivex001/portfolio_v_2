@@ -5,21 +5,25 @@ interface AboutData {
 
 const aboutData: AboutData = {
   technologies: [
-    "JavaScript",
     "TypeScript",
-    "React Native",
     "React",
     "Next.js",
-    "Express.js",
+    "React Native",
+    "JavaScript",
+    "Node.js",
+    "Tailwind CSS",
     "MongoDB",
     "Firebase",
-    "Tailwind CSS"
   ],
   tools: [
-    "Git / Github",
+    "Git / GitHub",
     "Figma",
+    "VS Code",
     "Vercel",
-    "Responsive Development"
+    "Linear",
+    "Expo",
+    "Claude Code",
+    "Cursor",
   ]
 }
 

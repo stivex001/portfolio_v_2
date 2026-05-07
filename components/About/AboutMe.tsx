@@ -76,79 +76,84 @@ export const AboutMe = (props: Props) => {
 
   return (
     <Section name="about" id="about" padding="pt-12 pb-16 md:py-8">
-      <SectionHeader>About me</SectionHeader>
-      <div className=" grid gap-6 md:grid-cols-10 my-6 md:my-[96px] xl:mt-[128px] xl:mb-[256px]">
+      <SectionHeader>About</SectionHeader>
+      <div className="grid gap-6 md:grid-cols-10 my-6 md:my-[96px] xl:mt-[128px] xl:mb-[256px]">
         <AboutImage
           imageAnimate={imageReveal}
           plusReveal={bgPlusReveal}
           lineAnimate={[bgLineReveal, bgLineGlow]}
         />
         <div
-          className="grid gap-6 about-content md:col-span-6 md:grid-cols-2"
+          className="grid gap-8 about-content md:col-span-6 md:grid-cols-2"
           ref={observedRef}
         >
+          {/* ── Introduction ── */}
           <article className="md:col-span-2">
-            <a.h3
-              className="text-[18px] leading-[1.3] font-semibold text-grey-1 dark:text-grey-d mb-2"
-              style={headerReveal(0)}
-            >
-              Introduction
+            <a.h3 style={headerReveal(0)} className="mb-3">
+              <span className="block w-5 h-[2px] bg-blue-100 dark:bg-blue-d-200 mb-2" />
+              <span className="text-[15px] font-mono tracking-[0.14em] uppercase text-grey-3 dark:text-grey-b">
+                Introduction
+              </span>
             </a.h3>
-            <a.div style={layoutReveal()}>
+            <a.div
+              style={layoutReveal()}
+              className="text-[15px] md:text-[16px] leading-[1.75] text-grey-3 dark:text-grey-b space-y-4"
+            >
               <CustomTooltip id="about-info-1">
-                <span className="underline">baistevoo</span> is my nickname.
-                
+                <span className="underline">baistevoo</span> — my handle across the web.
               </CustomTooltip>
-              <a.p className="mb-4">
-                My name is{" "}
-                <strong
-                  className="text-grey-1 dark:text-grey-d whitespace-nowrap"
-                  aria-describedby="about-info-1"
-                >
+              <p>
+                I&apos;m{" "}
+                <strong className="text-grey-1 dark:text-grey-d font-semibold whitespace-nowrap">
                   Stephen Segun Adeyemo
                 </strong>{" "}
                 <button
                   className="group/info-button inline relative top-[3px]"
                   name="show extra info"
-                  // aria-label="'Kosi' is short for 'Kosisochukwu'"
                   data-tooltip-id="about-info-1"
                 >
                   <InfoIcon />
-                </button>{" "}
-                , I&apos;m a{" "}
-                <strong className="text-grey-1 dark:text-grey-d whitespace-nowrap">
-                  Software Engineer
+                </button>
+                {" "}— a{" "}
+                <strong className="text-grey-1 dark:text-grey-d font-semibold">
+                  Product Engineer
                 </strong>{" "}
-                (front-end heavy) based in Nigeria. I spend most of my time
-                 coding up things for the web, and learning
-                algorithms.
-              </a.p>
-              <a.p>
-                My goal is to deliver, through code, unique and innovative
-                solutions to complex problems. If my portfolio interests you, or
-                you need an enthusiastic developer on your team,{" "}
+                focused on web and mobile, based in Abuja, Nigeria. I build
+                across React, Next.js, and React Native, with a focus on
+                interfaces that are fast, accessible, and genuinely satisfying
+                to use.
+              </p>
+              <p>
+                I care about the overlap between design and engineering.
+                Whether architecting a system or sweating a micro-interaction,
+                the goal is the same: ship something worth being proud of. If
+                that kind of thinking fits what you&apos;re building,{" "}
                 <Link href="mailto:stephenadeyemo@gmail.com">
-                  I am available for hire
+                  I&apos;m open to new projects
                 </Link>
                 .
-              </a.p>
+              </p>
             </a.div>
           </article>
+
+          {/* ── Tech Stack ── */}
           <article>
-            <a.h3
-              className="text-[18px] leading-[1.3] font-semibold text-grey-1 dark:text-grey-d mb-2"
-              style={headerReveal(1)}
-            >
-              Languages & Technologies
+            <a.h3 style={headerReveal(1)} className="mb-3">
+              <span className="block w-5 h-[2px] bg-blue-100 dark:bg-blue-d-200 mb-2" />
+              <span className="text-[15px] font-mono tracking-[0.14em] uppercase text-grey-3 dark:text-grey-b">
+                Tech Stack
+              </span>
             </a.h3>
             <AboutList items={aboutData.technologies} />
           </article>
+
+          {/* ── Tooling ── */}
           <article>
-            <a.h3
-              className="text-[18px] leading-[1.3] font-semibold text-grey-1 dark:text-grey-d mb-2"
-              style={headerReveal(2)}
-            >
-              Tools & Methods
+            <a.h3 style={headerReveal(2)} className="mb-3">
+              <span className="block w-5 h-[2px] bg-blue-100 dark:bg-blue-d-200 mb-2" />
+              <span className="text-[15px] font-mono tracking-[0.14em] uppercase text-grey-3 dark:text-grey-b">
+                Tooling
+              </span>
             </a.h3>
             <AboutList items={aboutData.tools} />
           </article>
