@@ -5,76 +5,72 @@ import Link from "../clickable/Link";
 import Image from "next/image";
 import logo from "@/components/images/bai_lofo.png";
 import footerData from "../data/footer";
-import HeartIcon from "../svg/abstract/HeartIcon";
+import { navigationData } from "../data/navigation";
 import ThemeToggle from "./ThemeToggle";
 
-type Props = {};
-
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
-    <div className="px-8 border-t footer-container bg-grey-fb dark:bg-secondary border-grey-d dark:border-grey-2">
-      <footer className="flex flex-col w-full max-w-screen-xl gap-10 py-8 mx-auto md:flex-row md:justify-between">
-        <div className="flex justify-between items-center md:items-start md:flex-col md:gap-8">
+    <div className="px-6 md:px-8 border-t border-grey-d dark:border-grey-2 bg-grey-fb dark:bg-secondary">
+      <footer className="max-w-screen-xl mx-auto py-8 flex flex-col gap-8">
+
+        {/* Main row */}
+        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+
+          {/* Brand */}
           <Link
             href="/"
             variant="plain"
-            ariaLabel="Stephen Adeyemo' Portfolio Logo"
-            title="Stephen Adeyemo' Portfolio"
+            internal
+            ariaLabel="Stephen Adeyemo — back to top"
           >
-            {/* <span className="inline-block md:hidden">
-              <LogoSmall />
-            </span> */}
-            <div className="w-[100px] h-[100px]">
-              <Image
-                src={logo}
-                alt="logo"
-                className="inline-block w-full h-full"
-              />
+            <div className="flex items-center gap-3 group">
+              <div className="w-9 h-9 shrink-0 overflow-hidden rounded-md">
+                <Image src={logo} alt="logo" width={36} height={36} className="w-full h-full object-contain" />
+              </div>
+              <div>
+                <p className="font-visby font-extrabold text-[14px] text-grey-1 dark:text-grey-d group-hover:text-blue-100 dark:group-hover:text-blue-d-200 transition-colors leading-[1.2]">
+                  Stephen Adeyemo
+                </p>
+                <p className="font-mono text-[10px] tracking-[0.1em] text-grey-4 dark:text-grey-9 leading-[1.4]">
+                  Product Engineer
+                </p>
+              </div>
             </div>
           </Link>
-          <ul
-            className="flex gap-4 md:flex-col md:gap-3"
-            aria-label="social links"
-          >
-            {footerData.socials.map((social) => (
-              <li key={social.name} className="group/icon">
-                <a
-                  href={social.link}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  className="md:flex md:gap-2 md:flex-end"
-                  aria-label={social.name}
-                >
-                  <div className="flex w-[24px]">{social.icon}</div>
-                  <span
-                    className={`
-                    hidden md:inline text-grey-6 dark:text-grey-9 text-[15px] relative
-                    after:bg-grey-6 after:dark:bg-grey-9 after:pointer-events-none
-                    after:absolute after:left-0 after:-bottom-[2px]
-                    after:w-full after:h-[2px]
-                    after:opacity-0 group-hover/icon:after:opacity-100
-                  `}
+
+          {/* Nav quick links */}
+          <nav aria-label="footer navigation">
+            <ul className="flex flex-wrap gap-x-6 gap-y-2">
+              {navigationData.anchors.map((anchor) => (
+                <li key={anchor.name}>
+                  <a
+                    href={anchor.link}
+                    className="font-mono text-[11px] tracking-[0.1em] uppercase text-grey-4 dark:text-grey-9 hover:text-grey-1 dark:hover:text-grey-d transition-colors"
                   >
-                    {social.name}
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
+                    {anchor.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Theme toggle */}
+          <ThemeToggle />
         </div>
-        <div className="flex flex-col gap-3 content-2 md:justify-between">
-          <div className="self-center md:self-end">
-            <ThemeToggle />
-          </div>
-          <p
-            className="text-grey-6 dark:text-grey-9 text-[15px] text-center flex gap-[6px] items-center self-center md:self-end select-none"
-            aria-label="Built with passion by Okoye Charles"
-          >
-            Built with
-            <HeartIcon />
-            by <Link href={footerData.sourceCode}>Stephen Adeyemo</Link>
+
+        {/* Bottom rule + copyright */}
+        <div className="pt-6 border-t border-grey-d dark:border-grey-2 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+          <p className="font-mono text-[10px] tracking-[0.08em] text-grey-9 dark:text-grey-5 select-none">
+            © {new Date().getFullYear()} Stephen Adeyemo. All rights reserved.
           </p>
+          <Link
+            href={footerData.sourceCode}
+            className="font-mono text-[10px] tracking-[0.08em] text-grey-9 dark:text-grey-5 hover:text-grey-4 dark:hover:text-grey-9 transition-colors"
+          >
+            View source
+          </Link>
         </div>
+
       </footer>
     </div>
   );
