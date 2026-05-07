@@ -25,7 +25,7 @@ const Recommendations = (props: Props) => {
       padding="pt-12 pb-16 md:py-8 md:pb-[224px]"
     >
       <SectionHeader mode="standalone">
-        Working <span className="text-blue-100 dark:blue-d-200">remotely</span>{" "}
+        Working <span className="text-blue-100 dark:text-blue-d-200">remotely</span>{" "}
         with professionals across the globe
       </SectionHeader>
       <SectionDescription>

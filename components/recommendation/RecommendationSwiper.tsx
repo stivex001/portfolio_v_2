@@ -93,7 +93,7 @@ export const RecommendationSwiper = ({
       aria-label="recommendation carousel"
     >
       <a.div
-        className="aspect-square w-full h-full max-w-[375px] max-h-[375px] lg:max-w-[450px] lg:max-h-[450px] relative self-center"
+        className="aspect-square w-full max-w-[340px] md:max-w-[375px] lg:max-w-[430px] relative self-center shrink-0"
         ref={observedRef}
         style={earthViewedSpring}
       >
