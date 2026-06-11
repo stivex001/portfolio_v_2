@@ -185,6 +185,7 @@ export default function OgImage() {
         >
           <img
             src={photoSrc}
+            alt={alt}
             width={320}
             height={430}
             style={{
