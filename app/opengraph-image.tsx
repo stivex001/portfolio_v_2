@@ -10,7 +10,7 @@ export const contentType = "image/png";
 
 export default function OgImage() {
   const imageBuffer = fs.readFileSync(
-    path.join(process.cwd(), "public/assets/stephen.png")
+    path.join(process.cwd(), "public/assets/mysef.png")
   );
   const photoSrc = `data:image/png;base64,${imageBuffer.toString("base64")}`;
 
@@ -170,7 +170,7 @@ export default function OgImage() {
               letterSpacing: "0.1em",
             }}
           >
-            stephenadeyemo.dev
+            stephenadeyemo.com.ng
           </div>
         </div>
 
