@@ -170,7 +170,7 @@ export default function OgImage() {
               letterSpacing: "0.1em",
             }}
           >
-            stephenadeyemo.com.ng
+            stephenadeyemo.com
           </div>
         </div>
 
